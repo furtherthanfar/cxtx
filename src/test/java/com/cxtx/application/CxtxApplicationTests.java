@@ -1,4 +1,4 @@
-package com.cxtx.demo;
+package com.cxtx.application;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

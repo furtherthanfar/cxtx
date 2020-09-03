@@ -1,7 +1,9 @@
 package com.cxtx.context;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 
+@Slf4j(topic = "ContextUtil")
 public class ContextUtil {
     // 容器
     private static ApplicationContext applicationContext;
@@ -9,11 +11,11 @@ public class ContextUtil {
     public static synchronized boolean setApplicationContext(ApplicationContext context){
         if(applicationContext == null){
             ContextUtil.applicationContext = context;
-            System.out.println("Yes");
+            log.info("ApplicationContext Set Successfully");
             return true;
         }
 
-        System.out.println("ApplicationContext Has Been Set, Can't Repeatable Set!");
+        log.info("ApplicationContext Has Been Set, Can't Repeatable Set!");
         return false;
     }
 
