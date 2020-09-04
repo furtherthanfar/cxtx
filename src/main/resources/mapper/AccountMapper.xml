@@ -6,11 +6,11 @@
 <mapper namespace="com.cxtx.account.mapper.AccountMapper">
 
     <insert id="insertAccount" parameterType="com.cxtx.account.pojo.Account">
-        INSERT INTO account VALUES (0, #{userName}, #{passWord})
+        INSERT INTO account() VALUES (#{userName}, #{passWord},0)
     </insert>
 
     <select id="selectAccount" parameterType="java.lang.String" resultMap="accountMap" >
-        SELECT id,userName,passWord FROM account WHERE userName = #{userName} AND passWord = #{passWord}
+        SELECT user_id,userName,passWord FROM account WHERE userName = #{userName} AND passWord = #{passWord}
     </select>
 
     <resultMap id="accountMap" type="com.cxtx.account.pojo.Account">

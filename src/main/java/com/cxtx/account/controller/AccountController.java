@@ -1,8 +1,6 @@
 package com.cxtx.account.controller;
 
-import com.cxtx.account.mapper.AccountMapper;
 import com.cxtx.account.pojo.Account;
-import com.cxtx.account.service.AccountService;
 import com.cxtx.account.service.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,16 +34,9 @@ public class AccountController {
         String userName = request.getParameter("userName");
         String passWord = request.getParameter("passWord");
         accountMapper.insertAccount(new Account(userName,passWord,0));
-        return "success";
+        return "Welcome  User :" + userName;
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/success")
-    public String success(){
-            return "success";
-
-
-    }
 
 
 }
