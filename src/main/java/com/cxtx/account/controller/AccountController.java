@@ -2,6 +2,8 @@ package com.cxtx.account.controller;
 
 import com.cxtx.account.mapper.AccountMapper;
 import com.cxtx.account.pojo.Account;
+import com.cxtx.account.service.AccountService;
+import com.cxtx.account.service.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 public class AccountController {
 
     @Autowired
-    private AccountMapper accountMapper;
+    private AccountServiceImpl accountMapper;
 
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
