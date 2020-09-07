@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cxtx.iml" filepath="$PROJECT_DIR$/cxtx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cxtx-dao/cxtx-dao.iml" filepath="$PROJECT_DIR$/cxtx-dao/cxtx-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cxtx-pojo/cxtx-pojo.iml" filepath="$PROJECT_DIR$/cxtx-pojo/cxtx-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cxtx-service/cxtx-service.iml" filepath="$PROJECT_DIR$/cxtx-service/cxtx-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cxtx-util/cxtx-util.iml" filepath="$PROJECT_DIR$/cxtx-util/cxtx-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cxtx-web/cxtx-web.iml" filepath="$PROJECT_DIR$/cxtx-web/cxtx-web.iml" />
+    </modules>
+  </component>
+</project>
