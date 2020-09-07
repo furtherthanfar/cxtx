@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.cxtx.user.UserMapper">
+
+    <!-- 插入一个User -->
+    <insert id="insertUser" parameterType="com.cxtx.user.User">
+        INSERT INTO
+        user(user_id,user_nickname,user_gender,user_birth,user_real_name,user_phone_number,user_email,
+             user_career,user_head,user_description,city_name)
+        VALUES(
+            #{id},#{nickName},#{gender},#{birth},#{description},#{phoneNumber},#{email},
+            #{career},#{head},#{realName},#{cityName}
+        )
+    </insert>
+
+    <select id="selectUserById" parameterType="java.lang.Integer" resultMap="userMap">
+        SELECT user_id,user_nickname,user_gender,user_birth,user_real_name,user_phone_number,user_email,
+             user_career,user_head,user_description,city_name
+        FROM user
+        WHERE uesr_id = #{user_id}
+    </select>
+
+    <resultMap id="userMap" type="com.cxtx.user.User">
+        <id property="id" column="user_id"></id>
+        <result property="nickName" column="user_nick_name"></result>
+        <result property="gender" column="user_gender"></result>
+        <result property="birth" column="user_birth"></result>
+        <result property="description" column="user_description"></result>
+        <result property="phoneNumber" column="user_phone_number"></result>
+        <result property="email" column="user_email"></result>
+        <result property="career" column="user_career"></result>
+        <result property="realName" column="user_real_name"></result>
+        <result property="cityName" column="city_name"></result>
+    </resultMap>
+
+</mapper>

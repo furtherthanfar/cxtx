@@ -6,16 +6,30 @@
 <mapper namespace="com.cxtx.account.AccountMapper">
 
     <insert id="insertAccount" parameterType="com.cxtx.account.Account">
-        INSERT INTO account VALUES (0, #{userName}, #{passWord})
+        INSERT INTO
+        account (
+        account_id,
+        account_username,
+        account_password,
+        user_id)
+        VALUES (
+        0,
+        #{userName},
+        #{passWord},
+        #{user_id})
     </insert>
 
-    <select id="selectAccount" parameterType="java.lang.String" resultMap="accountMap" >
-        SELECT id,userName,passWord FROM account WHERE userName = #{userName} AND passWord = #{passWord}
+    <select id="selectAccount" parameterType="java.lang.String" resultMap="accountMap">
+        SELECT
+        account_id,account_username,account_password,user_id
+        FROM account
+        WHERE userName = #{userName} AND passWord = #{passWord}
     </select>
 
     <resultMap id="accountMap" type="com.cxtx.account.Account">
-        <id property="userName" column="userName"></id>
-        <result property="passWord" column="passWord"></result>
+        <id property="id" column="account_id"></id>
+        <result property="userName" column="account_username"></result>
+        <result property="passWord" column="account_password"></result>
         <result property="user_id" column="user_id"></result>
     </resultMap>
 
