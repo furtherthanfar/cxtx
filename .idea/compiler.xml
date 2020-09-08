@@ -16,29 +16,21 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cxtx" target="1.8" />
-      <module name="cxtx-account" target="1.8" />
       <module name="cxtx-dao" target="1.8" />
-      <module name="cxtx-order" target="1.8" />
       <module name="cxtx-pojo" target="1.8" />
       <module name="cxtx-service" target="1.8" />
-      <module name="cxtx-user" target="1.8" />
       <module name="cxtx-util" target="1.8" />
       <module name="cxtx-web" target="1.8" />
-      <module name="test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cxtx" options="" />
-      <module name="cxtx-account" options="-parameters" />
       <module name="cxtx-dao" options="-parameters" />
-      <module name="cxtx-order" options="-parameters" />
       <module name="cxtx-pojo" options="-parameters" />
       <module name="cxtx-service" options="-parameters" />
-      <module name="cxtx-user" options="-parameters" />
       <module name="cxtx-util" options="-parameters" />
       <module name="cxtx-web" options="-parameters" />
-      <module name="test" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,2 +1,3 @@
 com\cxtx\account\AccountMapper.class
 com\cxtx\user\UserMapper.class
+com\cxtx\wallet\WalletMapper.class
