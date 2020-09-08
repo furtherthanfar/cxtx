@@ -1,2 +1,5 @@
 com\cxtx\account\AccountController.class
+com\cxtx\interceptor\UserInterceptor.class
 com\cxtx\CxtxApplication.class
+com\cxtx\interceptor\InterceptorConfiguration.class
+com\cxtx\user\UserController.class

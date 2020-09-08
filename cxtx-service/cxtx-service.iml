@@ -28,7 +28,6 @@
     <orderEntry type="module" module-name="cxtx-pojo" />
     <orderEntry type="module" module-name="cxtx-dao" />
     <orderEntry type="module" module-name="cxtx-util" />
-    <orderEntry type="module" module-name="cxtx-web" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.3.3.RELEASE" level="project" />

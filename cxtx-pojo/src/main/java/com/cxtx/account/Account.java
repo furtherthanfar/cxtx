@@ -1,7 +1,13 @@
 package com.cxtx.account;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(scopeName = "prototype")
 public class Account {
 
+    private int id;
     private String userName;
     private String passWord;
     private int user_id;
@@ -9,10 +15,22 @@ public class Account {
     public Account() {
     }
 
-    public Account(String userName, String passWord, int user_id) {
-        this.userName = userName;
-        this.passWord = passWord;
-        this.user_id = user_id;
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", passWord='" + passWord + '\'' +
+                ", user_id=" + user_id +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUserName() {
