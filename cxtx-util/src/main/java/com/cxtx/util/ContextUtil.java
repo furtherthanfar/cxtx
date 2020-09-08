@@ -1,7 +1,9 @@
+package com.cxtx.util;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 
-@Slf4j(topic = "ContextUtil")
+@Slf4j(topic = "com.cxtx.util.ContextUtil")
 public class ContextUtil {
     // 容器
     private static ApplicationContext applicationContext;

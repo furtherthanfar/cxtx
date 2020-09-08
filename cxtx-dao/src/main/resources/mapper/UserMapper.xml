@@ -23,6 +23,21 @@
         WHERE uesr_id = #{user_id}
     </select>
 
+    <update id="alterUserInfo" parameterType="com.cxtx.user.User">
+        UPDATE user SET
+        user_nickname = #{nickName},
+        user_gender = #{gender},
+        user_birth = #{birth},
+        user_real_name = #{realName},
+        user_phone_number = #{phoneNumber},
+        user_email = #{email},
+        user_career = #{career},
+        user_head = #{head},
+        user_description = #{description},
+        city_name = #{cityName}
+        WHERE user_id = #{id}
+    </update>
+
     <resultMap id="userMap" type="com.cxtx.user.User">
         <id property="id" column="user_id"></id>
         <result property="nickName" column="user_nick_name"></result>

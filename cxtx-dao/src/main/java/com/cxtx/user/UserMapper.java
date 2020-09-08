@@ -20,4 +20,10 @@ public interface UserMapper {
      * @return
      */
     public User selectUserById(int user_id);
+
+    /**
+     * 修改用户信息
+     * @param user
+     */
+    public void alterUserInfo(User user);
 }

@@ -4,14 +4,12 @@ import com.cxtx.user.User;
 import com.cxtx.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@RequestMapping(value = "/sign")
 public class AccountController {
 
     @Autowired
@@ -19,8 +17,19 @@ public class AccountController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/toSignUp")
+    public String toSighUp(){
+        return "signUp";
+    }
+
+
+    /**
+     * 登录已有的账户
+     * @param request
+     * @return
+     */
     @ResponseBody
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login")
     public String login(HttpServletRequest request) {
         String userName = request.getParameter("userName");
         String passWord = request.getParameter("passWord");
@@ -44,12 +53,14 @@ public class AccountController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/signUp", method = RequestMethod.POST)
+    @RequestMapping(value = "/signUp")
     public String signUp(@RequestBody User user, @RequestBody Account account) {
         // 把用户和账户信息加入数据库
         userService.insertAccountAndUser(account, user);
         return "Welcome  User :" + user.getNickName();
     }
+
+
 
 
 }

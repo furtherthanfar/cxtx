@@ -22,12 +22,15 @@ public class UserService {
         return userMapper.selectUserById(user_id);
     }
 
+    public void alterInfo(User user){
+        userMapper.alterUserInfo(user);
+    }
+
     @Transactional
     public void insertAccountAndUser(Account account, User user) {
         int user_id = insertUser(user);
         account.setUser_id(user_id);
         accountMapper.insertAccount(account);
     }
-
 
 }
