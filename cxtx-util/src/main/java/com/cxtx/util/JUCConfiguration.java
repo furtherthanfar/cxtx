@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
 @Configuration
-public class LockConfiguration {
+public class JUCConfiguration {
 
     @Bean
     public ReentrantLock reentrantLock(){
