@@ -1,3 +1,4 @@
-com\cxtx\wallet\Wallet.class
+com\cxtx\site\Site.class
 com\cxtx\user\User.class
+com\cxtx\wallet\Wallet.class
 com\cxtx\account\Account.class

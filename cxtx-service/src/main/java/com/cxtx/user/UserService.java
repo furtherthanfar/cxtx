@@ -40,12 +40,12 @@ public class UserService {
     @Transactional
     public void insertAccountAndUser(Account account, User user) {
         int user_id = insertUser(user);
-        account.setUser_id(user_id);
+        account.setUser_id(user.getId());
         accountMapper.insertAccount(account);
         Wallet wallet = (Wallet) ContextUtil.getBean("wallet");
         wallet.setBalance(0);
         wallet.setScore(0);
-        wallet.setUser_id(user_id);
+        wallet.setUser_id(user.getId());
         walletMapper.insertWallet(wallet);
     }
 

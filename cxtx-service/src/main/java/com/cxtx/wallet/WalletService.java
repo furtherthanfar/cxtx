@@ -2,6 +2,7 @@ package com.cxtx.wallet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class WalletService {
@@ -30,11 +31,17 @@ public class WalletService {
 
     /**
      * 根据用户id和变化的金额，更新钱包余额
-     *
+     *  如果是充值，增加积分
      * @param user_id
      * @param changedBalance
      */
+    @Transactional
     public void updateBalanceByUserId(int user_id, double changedBalance) {
+        // 更新余额
         walletMapper.updateBalanceByUserId(user_id, changedBalance);
+        if(changedBalance > 0){
+            // 更新信誉积分
+            walletMapper.updateScoreByUserId(user_id, (int)changedBalance * 100);
+        }
     }
 }
