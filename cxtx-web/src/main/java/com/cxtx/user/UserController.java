@@ -33,7 +33,7 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "获得用户信息")
-    @RequestMapping(value = "/getUserInfo")
+    @RequestMapping(value = "/getUserInfo", method = RequestMethod.POST)
     @ResponseBody
     public User getUserInfo(HttpServletRequest request){
         int user_id = (int) request.getSession().getAttribute("user_id");
@@ -78,7 +78,8 @@ public class UserController {
         String filePath = null;
         try {
             //dirPath = ResourceUtils.getURL("classPath:").getPath() + "static" + File.separator + "userheads";
-            filePath = dirPath + File.separator + getHeadImageName();
+            String[] split = image.getOriginalFilename().split("\\.");
+            filePath = dirPath + File.separator + getHeadImageName() + "." +  split[split.length - 1];
             File file = new File(filePath);
             image.transferTo(file);
         } catch (FileNotFoundException e) {

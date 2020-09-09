@@ -68,6 +68,8 @@ public class AccountController {
     }*/
 
 
+
+    @ApiOperation(value = "注册新的用户")
     /**
      * 注册新的用户
      * @param userName 用户名
@@ -84,7 +86,6 @@ public class AccountController {
      * @param cityName 城市名称
      * @return
      */
-    @ApiOperation(value = "注册新的用户")
     @ResponseBody
     @RequestMapping(value = "/signUp",method = RequestMethod.POST)
     public String signUp(String userName,String password,

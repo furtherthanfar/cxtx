@@ -24,13 +24,13 @@ public class Site {
     // 打折原因
     private String dcReason;
     // 图片路径
-    private List<String> pictures;
+    private List<SitePicture> pictures;
 
 
     public Site() {
     }
 
-    public void build(int id, String name, String description, String cityName, float price, float discount, String dcReason, List<String> pictures) {
+    public void build(int id, String name, String description, String cityName, float price, float discount, String dcReason, List<SitePicture> pictures) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -97,11 +97,11 @@ public class Site {
         this.dcReason = dcReason;
     }
 
-    public List<String> getPictures() {
+    public List<SitePicture> getPictures() {
         return pictures;
     }
 
-    public void setPictures(List<String> pictures) {
+    public void setPictures(List<SitePicture> pictures) {
         this.pictures = pictures;
     }
 }

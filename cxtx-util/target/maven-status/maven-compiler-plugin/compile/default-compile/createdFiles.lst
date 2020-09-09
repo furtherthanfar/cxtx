@@ -1,3 +1,4 @@
+com\cxtx\util\ImageUtil.class
+com\cxtx\util\JUCConfiguration.class
 com\cxtx\swagger\SwaggerConfiguration.class
-com\cxtx\util\LockConfiguration.class
 com\cxtx\util\ContextUtil.class
