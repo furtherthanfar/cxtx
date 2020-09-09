@@ -26,7 +26,6 @@ public class Site {
     // 图片路径
     private List<SitePicture> pictures;
 
-
     public Site() {
     }
 

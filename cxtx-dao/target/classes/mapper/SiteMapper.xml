@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.cxtx.site.SiteMapper">
+    <!--根据景点ID查找景点-->
+    <select id="selectSiteById" parameterType="java.lang.Integer" resultMap="siteMap">
+        SELECT
+        *
+        FROM
+        site
+        WHERE
+        site_id = #{site_id}
+    </select>
+
+    <select id="selectAllSites" resultMap="siteMap">
+        SELECT
+        *
+        FROM
+        site
+    </select>
+    
+    <!--根据景点ID查找到该景点的图片-->
+    <select id="selectPicturesBySiteId" resultMap="sitePictureMap">
+        SELECT
+        sp_id, sp_path, site_id
+        FROM
+        spicture
+        WHERE
+        site_id = #{site_id}
+    </select>
+
+    <resultMap id="sitePictureMap" type="com.cxtx.site.SitePicture">
+        <id property="id" column="sp_id"></id>
+        <result property="path" column="sp_path"></result>
+        <result property="site_id" column="site_id"></result>
+    </resultMap>
+
+    <resultMap id="siteMap" type="com.cxtx.site.Site">
+        <id property="id" column="site_id"></id>
+        <result property="name" column="site_name"></result>
+        <result property="description" column="site_description"></result>
+        <result property="price" column="site_price"></result>
+        <result property="discount" column="site_discount"></result>
+        <result property="dcReason" column="site_dc_reason"></result>
+        <result property="cityName" column="city_name"></result>
+        <collection property="pictures" ofType="com.cxtx.site.SitePicture" javaType="java.util.ArrayList" column="site_id" select="selectPicturesBySiteId">
+        </collection>
+    </resultMap>
+</mapper>

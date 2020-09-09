@@ -1,3 +1,5 @@
 com\cxtx\account\AccountService.class
+com\cxtx\site\SiteService.class
 com\cxtx\user\UserService.class
 com\cxtx\wallet\WalletService.class
+com\cxtx\site\SitePictureService.class
