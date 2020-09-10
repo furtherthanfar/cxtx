@@ -29,36 +29,9 @@ CREATE TABLE `account`  (
   PRIMARY KEY (`account_id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `account_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Records of account
--- ----------------------------
-INSERT INTO `account` VALUES (4, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (5, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (6, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (7, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (8, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (9, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (10, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (11, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (12, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (13, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (14, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (15, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (16, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (17, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (18, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (19, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (20, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (21, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (22, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (23, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (24, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (25, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (26, 'WWK', 'WWK', 1);
-INSERT INTO `account` VALUES (29, 'WWK', 'WWK', 28);
-INSERT INTO `account` VALUES (30, 'HJL', 'HJL', 29);
+
 
 -- ----------------------------
 -- Table structure for city
@@ -560,8 +533,7 @@ CREATE TABLE `site`  (
 -- ----------------------------
 -- Records of site
 -- ----------------------------
-INSERT INTO `site` VALUES (1, '黄鹤楼', '故人西辞黄鹤楼', 100.00, 1.00, 'NULL', '武汉市');
-INSERT INTO `site` VALUES (2, '故宫', '宝马', 200.50, NULL, NULL, '北京市');
+
 
 -- ----------------------------
 -- Table structure for spicture
@@ -579,13 +551,7 @@ CREATE TABLE `spicture`  (
 -- ----------------------------
 -- Records of spicture
 -- ----------------------------
-INSERT INTO `spicture` VALUES (1, 'D:\\dadad.jpg', 1);
-INSERT INTO `spicture` VALUES (2, '1245', 1);
-INSERT INTO `spicture` VALUES (3, '12415', 1);
-INSERT INTO `spicture` VALUES (4, '5445', 1);
-INSERT INTO `spicture` VALUES (7, 'D:\\guGong.jpg', 2);
-INSERT INTO `spicture` VALUES (9, '54646846', 2);
-INSERT INTO `spicture` VALUES (10, '24524125241', 2);
+
 
 -- ----------------------------
 -- Table structure for user
@@ -606,36 +572,12 @@ CREATE TABLE `user`  (
   PRIMARY KEY (`user_id`) USING BTREE,
   INDEX `city_name`(`city_name`) USING BTREE,
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`city_name`) REFERENCES `city` (`city`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 29 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (4, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (5, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (6, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (7, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (8, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (9, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (10, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (11, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (12, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (13, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (14, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (15, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (16, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (17, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (18, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (19, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (20, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (21, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (22, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (23, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (24, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (25, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (28, '五五开', '男', NULL, NULL, '15207155054', NULL, NULL, '124545', NULL, '广州市');
-INSERT INTO `user` VALUES (29, '大司马', '男', NULL, NULL, '121212121', NULL, NULL, '111', NULL, '芜湖市');
+
 
 -- ----------------------------
 -- Table structure for wallet
@@ -649,36 +591,11 @@ CREATE TABLE `wallet`  (
   PRIMARY KEY (`wallet_id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `wallet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of wallet
 -- ----------------------------
-INSERT INTO `wallet` VALUES (1, 10.00, 20, 1);
-INSERT INTO `wallet` VALUES (2, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (3, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (4, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (5, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (6, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (7, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (8, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (9, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (10, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (11, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (12, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (13, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (14, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (15, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (16, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (17, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (18, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (19, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (20, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (21, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (22, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (23, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (24, 0.00, 0, 1);
-INSERT INTO `wallet` VALUES (25, 0.00, 0, 28);
-INSERT INTO `wallet` VALUES (26, 0.00, 0, 29);
+
 
 SET FOREIGN_KEY_CHECKS = 1;
