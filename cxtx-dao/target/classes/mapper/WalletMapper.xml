@@ -8,9 +8,9 @@
     <insert id="insertWallet" parameterType="com.cxtx.wallet.Wallet">
         INSERT INTO
         wallet
-        (wallet_id, wallet_balance, wallet_score, user_id)
+        (wallet_balance, wallet_score, user_id)
         VALUES
-        #{id}, #{balance}, #{score}, #{user_id}
+        (#{balance}, #{score}, #{user_id})
     </insert>
     <!--根据用户id查找钱包-->
     <select id="selectWalletByUserId" parameterType="java.lang.Integer" resultMap="walletMap">

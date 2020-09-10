@@ -23,6 +23,20 @@ public class User {
 
     /*Getter & Setter & toString*/
 
+    public void build(int id, String nickName, String gender, Date birth, String description, String phoneNumber, String email, String career, String realName, String head, String cityName) {
+        this.id = id;
+        this.nickName = nickName;
+        this.gender = gender;
+        this.birth = birth;
+        this.description = description;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.career = career;
+        this.realName = realName;
+        this.head = head;
+        this.cityName = cityName;
+    }
+
     @Override
     public String toString() {
         return "User{" +

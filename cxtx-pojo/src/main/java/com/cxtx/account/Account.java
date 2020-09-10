@@ -25,6 +25,13 @@ public class Account {
                 '}';
     }
 
+    public void build(int id, String userName, String passWord, int user_id) {
+        this.id = id;
+        this.userName = userName;
+        this.passWord = passWord;
+        this.user_id = user_id;
+    }
+
     public int getId() {
         return id;
     }

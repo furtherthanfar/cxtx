@@ -8,12 +8,10 @@
     <insert id="insertAccount" parameterType="com.cxtx.account.Account">
         INSERT INTO
         account (
-        account_id,
         account_username,
         account_password,
         user_id)
         VALUES (
-        0,
         #{userName},
         #{passWord},
         #{user_id})
@@ -21,7 +19,7 @@
 
     <select id="selectAccount" parameterType="java.lang.String" resultMap="accountMap">
         SELECT
-        account_id,account_username,account_password,user_id
+        account_username,account_password,user_id
         FROM account
         WHERE userName = #{userName} AND passWord = #{passWord}
     </select>

@@ -20,27 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b5cc07-e1a8-4416-9389-339107970cfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/18424.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/java/com/cxtx/wallet/WalletMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/WalletMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-pojo/src/main/java/com/cxtx/wallet/Wallet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-service/src/main/java/com/cxtx/wallet/WalletService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/java/com/cxtx/site/SiteMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/java/com/cxtx/site/SitePictureMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/SiteMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/SitePictureMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-service/src/main/java/com/cxtx/site/SitePictureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-service/src/main/java/com/cxtx/site/SiteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-web/src/main/java/com/cxtx/site/SiteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/src/main/java/com/cxtx/site/Site.java" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/src/main/java/com/cxtx/site/Site.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/src/main/java/com/cxtx/site/SitePicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/src/main/java/com/cxtx/site/SitePicture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-service/src/main/java/com/cxtx/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/src/main/java/com/cxtx/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/user/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/user/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +64,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="moudle_divide" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/furtherthanfar/cxtx.git" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -99,22 +110,22 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\cxtx\cxtx-account\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.cxtx" />
-      <recent name="com.cxtx.account" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IdeaProjects\cxtx\cxtx-pojo\src\main\java\com\cxtx" />
       <recent name="E:\IdeaProjects\cxtx\cxtx-web\src\main\resources\static" />
       <recent name="E:\IdeaProjects\cxtx\cxtx-web\src\main\resources" />
       <recent name="E:\IdeaProjects\cxtx\cxtx-util\src\main\java" />
       <recent name="E:\IdeaProjects\cxtx\cxtx-dao\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cxtx" />
+      <recent name="com.cxtx.account" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\cxtx\cxtx-account\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -151,7 +162,12 @@
       <workItem from="1599460389346" duration="11825000" />
       <workItem from="1599482170157" duration="16000" />
       <workItem from="1599525225466" duration="5443000" />
-      <workItem from="1599533421338" duration="382000" />
+      <workItem from="1599533421338" duration="2192000" />
+      <workItem from="1599547048713" duration="1227000" />
+      <workItem from="1599550421009" duration="6940000" />
+      <workItem from="1599560796392" duration="2150000" />
+      <workItem from="1599612029503" duration="8096000" />
+      <workItem from="1599633377901" duration="9143000" />
     </task>
     <task id="LOCAL-00001" summary="基本 module 划分">
       <created>1599442746314</created>
@@ -181,7 +197,35 @@
       <option name="project" value="LOCAL" />
       <updated>1599526442847</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="钱包功能">
+      <created>1599534711164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599534711164</updated>
+    </task>
+    <task id="LOCAL-00006" summary="整个swagger之后的">
+      <created>1599617009888</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599617009888</updated>
+    </task>
+    <task id="LOCAL-00007" summary="图片格式检查">
+      <created>1599634898479</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599634898479</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修改图片保存的格式bug">
+      <created>1599636496663</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599636496663</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,13 +247,21 @@
     <MESSAGE value="基本 module 划分" />
     <MESSAGE value="用户+账户" />
     <MESSAGE value="用户信息，用户头像" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户信息，用户头像" />
+    <MESSAGE value="钱包功能" />
+    <MESSAGE value="整个swagger之后的" />
+    <MESSAGE value="图片格式检查" />
+    <MESSAGE value="修改图片保存的格式bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改图片保存的格式bug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1599440950163">
+    <state x="361" y="53" key="#Plugins" timestamp="1599617703178">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1599440950163" />
+    <state x="361" y="53" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1599617703178" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1599535091108">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1599535091108" />
     <state x="171" y="287" key="#SQL_Dialects" timestamp="1599452649307">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -218,93 +270,109 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599475662440" />
-    <state x="844" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1599527485073">
+    <state x="844" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1599636819187">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="844" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1599527485073" />
+    <state x="844" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1599636819187" />
     <state x="722" y="236" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1599475656477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="722" y="236" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1599475656477" />
+    <state x="439" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1599639081030">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="439" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1599639081030" />
     <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599441909894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599441909894" />
-    <state width="1258" height="129" key="GridCell.Tab.0.bottom" timestamp="1599530899160">
+    <state x="524" y="114" key="#xdebugger.evaluate" timestamp="1599635565892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="129" key="GridCell.Tab.0.center" timestamp="1599530899160">
+    <state x="524" y="114" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1599635565892" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1599617185850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="129" key="GridCell.Tab.0.left" timestamp="1599530899160">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1599617185850" />
+    <state width="1258" height="145" key="GridCell.Tab.0.bottom" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="129" key="GridCell.Tab.0.right" timestamp="1599530899160">
+    <state width="1258" height="145" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="145" key="GridCell.Tab.0.center" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="129" key="GridCell.Tab.1.bottom" timestamp="1599530899160">
+    <state width="1258" height="145" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="145" key="GridCell.Tab.0.left" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="129" key="GridCell.Tab.1.center" timestamp="1599530899160">
+    <state width="1258" height="145" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="145" key="GridCell.Tab.0.right" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="129" key="GridCell.Tab.1.left" timestamp="1599530899160">
+    <state width="1258" height="145" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="145" key="GridCell.Tab.1.bottom" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="129" key="GridCell.Tab.1.right" timestamp="1599530899160">
+    <state width="1258" height="145" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="145" key="GridCell.Tab.1.center" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="129" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1599530899160" />
-    <state width="1258" height="121" key="GridCell.Tab.2.bottom" timestamp="1599476421401">
+    <state width="1258" height="145" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="145" key="GridCell.Tab.1.left" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="121" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599476421401" />
-    <state width="1258" height="121" key="GridCell.Tab.2.center" timestamp="1599476421401">
+    <state width="1258" height="145" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="145" key="GridCell.Tab.1.right" timestamp="1599642523534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="121" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1599476421401" />
-    <state width="1258" height="121" key="GridCell.Tab.2.left" timestamp="1599476421401">
+    <state width="1258" height="145" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1599642523534" />
+    <state width="1258" height="147" key="GridCell.Tab.2.bottom" timestamp="1599635829382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="121" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1599476421401" />
-    <state width="1258" height="121" key="GridCell.Tab.2.right" timestamp="1599476421401">
+    <state width="1258" height="147" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599635829382" />
+    <state width="1258" height="147" key="GridCell.Tab.2.center" timestamp="1599635829382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1258" height="121" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1599476421401" />
-    <state x="270" y="56" key="SettingsEditor" timestamp="1599527683932">
+    <state width="1258" height="147" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1599635829382" />
+    <state width="1258" height="147" key="GridCell.Tab.2.left" timestamp="1599635829382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599527683932" />
+    <state width="1258" height="147" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1599635829382" />
+    <state width="1258" height="147" key="GridCell.Tab.2.right" timestamp="1599635829382">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1258" height="147" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1599635829382" />
+    <state x="270" y="56" key="SettingsEditor" timestamp="1599617687642">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599617687642" />
     <state x="490" y="154" width="540" height="524" key="StructurePopup" timestamp="1599530312942">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1599530312942" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599526456227">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599636647724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599526456227" />
-    <state x="476" y="199" key="git4idea.merge.GitPullDialog" timestamp="1599388304420">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599636647724" />
+    <state x="476" y="199" key="git4idea.merge.GitPullDialog" timestamp="1599636642101">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="476" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1599388304420" />
-    <state x="564" y="311" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1599442807375">
+    <state x="476" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1599636642101" />
+    <state x="564" y="311" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1599617244019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="564" y="311" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599442807375" />
+    <state x="564" y="311" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599617244019" />
+    <state x="618" y="310" key="git4idea.ui.GitStashDialog" timestamp="1599636469303">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="310" key="git4idea.ui.GitStashDialog/0.0.1536.824@0.0.1536.824" timestamp="1599636469303" />
     <state x="318" y="87" key="new project wizard" timestamp="1599440562697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="318" y="87" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1599440562697" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599530868600">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599635247579">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599530868600" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599635247579" />
   </component>
 </project>

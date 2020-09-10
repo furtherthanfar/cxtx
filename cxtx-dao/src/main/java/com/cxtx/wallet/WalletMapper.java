@@ -29,4 +29,12 @@ public interface WalletMapper {
      */
     public void updateBalanceByUserId(int user_id, double changedBalance);
 
+
+    /**
+     * 根据用户id和变化的信誉分数，更新钱包信誉分数
+     * @param user_id
+     * @param changedScore
+     */
+    public void updateScoreByUserId(int user_id, int changedScore);
+
 }
