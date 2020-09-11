@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 
 @Api(tags = "帐号相关控制器")
@@ -19,7 +20,7 @@ import java.util.Date;
 public class AccountController {
 
     @Autowired
-    private AccountService accountMapper;
+    private AccountService accountService;
     @Autowired
     private UserService userService;
 
@@ -46,7 +47,7 @@ public class AccountController {
         String userName = request.getParameter("userName");
         String passWord = request.getParameter("passWord");
         Account account = null;
-        if ((account = accountMapper.selectAccount(userName, passWord)) != null) {
+        if ((account = accountService.selectAccount(userName, passWord)) != null) {
             // 登录成功，把用户的 id 存放进 session 域
             request.getSession().setAttribute("user_id",account.getUser_id());
             // Session 10 分钟过期
@@ -98,8 +99,10 @@ public class AccountController {
                          @Nullable String realName,
                          String head,
                          String cityName) {
+        // 组装新的account
         Account account = (Account) ContextUtil.getBean("account");
         account.build(0, userName, password, 0);
+        // 组装新的user
         User user = (User) ContextUtil.getBean("user");
         user.build(0, nickName, gender,
                 birth, description, phoneNumber,
@@ -110,6 +113,28 @@ public class AccountController {
         return "success";
     }
 
+
+    /**
+     * 修改登录密码
+     * @param originalPswd 原密码
+     * @param newPswd 新密码
+     * @param session
+     * @return
+     */
+    @ApiOperation(value = "修改登录密码")
+    @RequestMapping(value = "alterPassWord", method = RequestMethod.POST)
+    @ResponseBody
+    public String alterPassWord(String originalPswd, String newPswd, HttpSession session){
+        int user_id = (int) session.getAttribute("user_id");
+        Account account = accountService.selectAccountByUserId(user_id);
+        // 原密码错误
+        if(!account.getPassWord().equals(originalPswd)){
+            return "failure";
+        }
+        // 修改成功
+        accountService.updatePassWord(account.getUser_id(), newPswd);
+        return "success";
+    }
 
 
 }

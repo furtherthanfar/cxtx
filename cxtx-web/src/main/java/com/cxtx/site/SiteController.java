@@ -26,6 +26,7 @@ public class SiteController {
         return siteService.selectSiteById(site_id);
     }
 
+
     @ApiOperation(value = "获取所有的景点信息")
     @ResponseBody
     @RequestMapping(value = "/getAllSites", method = RequestMethod.GET)
