@@ -4,6 +4,7 @@ import com.cxtx.util.ContextUtil;
 import com.cxtx.util.ImageUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Api(tags = "景区信息相关")
 @Controller
 @RequestMapping(value = "/site")
+@Slf4j
 public class SiteController {
 
     @Autowired
@@ -31,7 +33,7 @@ public class SiteController {
     @Autowired
     private ImageUtil imageUtil;
     // 景点图片储存文件夹
-    private static String sitePicDirPath = "D:" + File.separator + "cxtx" + File.separator + "sitePictures";
+    public static String sitePicDirPath = "D:" + File.separator + "cxtx" + File.separator + "sitePictures";
 
     @ApiOperation(value = "根据景点ID获得景点信息")
     @ResponseBody
@@ -56,14 +58,11 @@ public class SiteController {
         // 检查文件格式，如果不合适，直接返回 "failure"
         for (MultipartFile file : pictures) {
             if (!imageUtil.isImageLegal(file.getOriginalFilename())) {
+                log.debug("景区图片格式错误");
                 return null;
             }
         }
-        // 如果图片文件夹不存在，创建
-        File dir = new File(sitePicDirPath);
-        if (!dir.exists()) {
-            dir.mkdir();
-        }
+
         // 图片命名计数器
         AtomicInteger imageInteger = (AtomicInteger) ContextUtil.getBean("sitePictureInteger");
         // 保存每一个文件路径
@@ -81,9 +80,11 @@ public class SiteController {
                 file.transferTo(newFile);
             } catch (IOException e) {
                 e.printStackTrace();
+                log.debug("异常");
                 return null;
             }
         }
+        log.debug("正常返回");
         return list;
     }
 
@@ -95,7 +96,7 @@ public class SiteController {
      */
     @ApiOperation(value = "添加一个新的景点", notes = "标签")
     @ResponseBody
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @RequestMapping(value = "/addNewSite", method = RequestMethod.POST)
     public String addNewSite(@RequestBody Site site) {
         if (siteService.insertSite(site) > 0) {
             return "success";

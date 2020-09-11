@@ -28,7 +28,7 @@ public class UserController {
     private ImageUtil imageUtil;
 
     // 文件上传开始
-    private static String userImageDirPath = "D:" + File.separator + "cxtx" + File.separator + "userImages";
+    public static String userImageDirPath = "D:" + File.separator + "cxtx" + File.separator + "userImages";
 
     /**
      * 获得用户的全部信息
