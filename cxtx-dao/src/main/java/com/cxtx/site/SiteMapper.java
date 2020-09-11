@@ -31,5 +31,11 @@ public interface SiteMapper {
      */
     public List<SitePicture> selectPicturesBySiteId(int site_id, RowBounds rowBounds);
 
+    /**
+     * 插入一个新的Site
+     * @param site
+     * @return
+     */
+    public int insertSite(Site site);
 
 }

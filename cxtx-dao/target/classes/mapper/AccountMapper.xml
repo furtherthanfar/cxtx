@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
 <mapper namespace="com.cxtx.account.AccountMapper">
-
+    <!--加入一个新帐号-->
     <insert id="insertAccount" parameterType="com.cxtx.account.Account">
         INSERT INTO
         account (
@@ -16,12 +16,31 @@
         #{passWord},
         #{user_id})
     </insert>
-
+    <!--根据帐号密码查找帐号-->
     <select id="selectAccount" parameterType="java.lang.String" resultMap="accountMap">
         SELECT
         account_username,account_password,user_id
         FROM account
         WHERE userName = #{userName} AND passWord = #{passWord}
+    </select>
+    <!--更新帐号密码-->
+    <update id="updatePassWord">
+        UPDATE
+        account
+        SET
+        account_password = #{passWord}
+        WHERE
+        account_id = #{account_id}
+    </update>
+
+    <!--根据用户ID查找帐号-->
+    <select id="selectAccountByUserId"  parameterType="java.lang.Integer">
+        SELECT
+        *
+        FROM
+        account
+        WHERE
+        user_id = #{user_id};
     </select>
 
     <resultMap id="accountMap" type="com.cxtx.account.Account">
