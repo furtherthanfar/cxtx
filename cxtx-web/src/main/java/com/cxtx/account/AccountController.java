@@ -54,20 +54,8 @@ public class AccountController {
             request.getSession().setMaxInactiveInterval(10 * 60);
             return "success";
         }
-        return "false";
-
+        return "failure";
     }
-
-
-    /*@ApiOperation(value = "注册新的用户")
-    @ResponseBody
-    @RequestMapping(value = "/signUp",method = RequestMethod.POST)
-    public String signUp(@RequestBody Account account,@RequestBody User user){
-        // 把用户和账户信息加入数据库
-        userService.insertAccountAndUser(account, user);
-        return "success";
-    }*/
-
 
 
     @ApiOperation(value = "注册新的用户")

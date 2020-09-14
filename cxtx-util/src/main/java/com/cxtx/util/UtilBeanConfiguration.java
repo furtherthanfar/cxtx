@@ -1,13 +1,17 @@
 package com.cxtx.util;
 
+import com.cxtx.province.Province;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
+
 
 @Configuration
 public class UtilBeanConfiguration {
@@ -59,4 +63,11 @@ public class UtilBeanConfiguration {
         return new Date();
     }
 
+    /*
+    @Bean
+    @Scope(value = "singleton")
+    public List<Province> provinces(){
+        return null;
+    }
+    */
 }
