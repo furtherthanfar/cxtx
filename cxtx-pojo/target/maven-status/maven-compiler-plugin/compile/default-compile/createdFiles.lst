@@ -1,7 +1,9 @@
 com\cxtx\city\City.class
 com\cxtx\site\Site.class
+com\cxtx\route\Route.class
 com\cxtx\province\Province.class
 com\cxtx\site\SitePicture.class
 com\cxtx\user\User.class
+com\cxtx\route\RouteSite.class
 com\cxtx\wallet\Wallet.class
 com\cxtx\account\Account.class

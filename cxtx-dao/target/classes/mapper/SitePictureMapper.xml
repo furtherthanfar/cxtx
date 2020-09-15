@@ -9,7 +9,7 @@
         INSERT INTO
         spicture(sp_path, site_id)
         VALUES
-        <foreach collection="list" item="item" index="index" open="(" close=")">
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
             #{item.path},#{item.site_id}
         </foreach>
     </insert>
