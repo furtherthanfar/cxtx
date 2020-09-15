@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.cxtx.province.ProvinceDao">
+    <!--根据省份ID查找城市-->
+    <select id="selectCitiesByPid" parameterType="java.lang.Integer" resultMap="cityMap">
+        SELECT
+        cid, city, pid
+        FROM
+        city
+        where
+        pid = #{pid}
+    </select>
+    <!--查找出所有的省份-->
+    <select id="selectAllProvinces" parameterType="java.lang.Integer" resultMap="provinceMap">
+        SELECT
+        pid, province
+        FROM
+        province
+    </select>
+
+    <!--City 的 resultMap-->
+    <resultMap id="cityMap" type="com.cxtx.city.City">
+        <id property="city" column="city"></id>
+        <result property="id" column="cid"></result>
+        <result property="pid" column="pid"></result>
+    </resultMap>
+
+    <resultMap id="provinceMap" type="com.cxtx.province.Province">
+        <id property="pid" column="pid"></id>
+        <result property="province" column="province"></result>
+        <collection property="cities" ofType="com.cxtx.city.City" javaType="java.util.ArrayList" select="selectCitiesByPid" column="pid"></collection>
+    </resultMap>
+</mapper>

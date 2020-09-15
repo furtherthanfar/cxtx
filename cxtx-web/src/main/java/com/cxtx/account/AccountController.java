@@ -43,9 +43,7 @@ public class AccountController {
     @ApiOperation(value = "登录")
     @ResponseBody
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(HttpServletRequest request) {
-        String userName = request.getParameter("userName");
-        String passWord = request.getParameter("passWord");
+    public String login(String userName, String passWord, HttpServletRequest request) {
         Account account = null;
         if ((account = accountService.selectAccount(userName, passWord)) != null) {
             // 登录成功，把用户的 id 存放进 session 域
@@ -85,7 +83,6 @@ public class AccountController {
                          @Nullable String email,
                          @Nullable String career,
                          @Nullable String realName,
-                         String head,
                          String cityName) {
         // 组装新的account
         Account account = (Account) ContextUtil.getBean("account");
@@ -94,8 +91,7 @@ public class AccountController {
         User user = (User) ContextUtil.getBean("user");
         user.build(0, nickName, gender,
                 birth, description, phoneNumber,
-                email, career, realName,
-                head, cityName);
+                email, career, realName, cityName);
         // 把用户和账户信息加入数据库
         userService.insertAccountAndUser(account, user);
         return "success";
@@ -110,7 +106,7 @@ public class AccountController {
      * @return
      */
     @ApiOperation(value = "修改登录密码")
-    @RequestMapping(value = "alterPassWord", method = RequestMethod.POST)
+    @RequestMapping(value = "/alterPassWord", method = RequestMethod.POST)
     @ResponseBody
     public String alterPassWord(String originalPswd, String newPswd, HttpSession session){
         int user_id = (int) session.getAttribute("user_id");

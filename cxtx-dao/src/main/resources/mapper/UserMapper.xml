@@ -9,16 +9,16 @@
     <insert id="insertUser" parameterType="com.cxtx.user.User" useGeneratedKeys="true" keyProperty="id"  keyColumn="user_id">
         INSERT INTO
         user(user_nick_name,user_gender,user_birth,user_real_name,user_phone_number,user_email,
-             user_career,user_head,user_description,city_name)
+             user_career,user_description,city_name)
         VALUES(
             #{nickName},#{gender},#{birth},#{description},#{phoneNumber},#{email},
-            #{career},#{head},#{realName},#{cityName}
+            #{career},#{realName},#{cityName}
         )
     </insert>
 
     <select id="selectUserById" parameterType="java.lang.Integer" resultMap="userMap">
         SELECT user_id,user_nick_name,user_gender,user_birth,user_real_name,user_phone_number,user_email,
-             user_career,user_head,user_description,city_name
+             user_career,user_description,city_name
         FROM user
         WHERE uesr_id = #{user_id}
     </select>
@@ -32,7 +32,6 @@
         user_phone_number = #{phoneNumber},
         user_email = #{email},
         user_career = #{career},
-        user_head = #{head},
         user_description = #{description},
         city_name = #{cityName}
         WHERE user_id = #{id}

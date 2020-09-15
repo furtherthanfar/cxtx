@@ -21,7 +21,7 @@
         SELECT
         account_username,account_password,user_id
         FROM account
-        WHERE userName = #{userName} AND passWord = #{passWord}
+        WHERE account_username = #{userName} AND account_password = #{passWord}
     </select>
     <!--更新帐号密码-->
     <update id="updatePassWord">
