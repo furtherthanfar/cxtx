@@ -16,6 +16,7 @@ import java.util.Date;
 
 @Api(tags = "帐号相关控制器")
 @Controller
+@RequestMapping(value = "/sign")
 public class AccountController {
 
     @Autowired
