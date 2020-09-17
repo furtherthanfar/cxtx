@@ -16,7 +16,6 @@ import java.util.Date;
 
 @Api(tags = "帐号相关控制器")
 @Controller
-@RequestMapping(value = "/sign")
 public class AccountController {
 
     @Autowired
@@ -29,9 +28,10 @@ public class AccountController {
      * @return
      */
     @ApiOperation(value = "去注册界面")
-    @GetMapping("/toSignUp")
+    @RequestMapping(value = "/toSignUp", method = RequestMethod.GET)
     public String toSighUp(){
-        return "signUp";
+        System.out.println("进入");
+        return "login";
     }
 
 

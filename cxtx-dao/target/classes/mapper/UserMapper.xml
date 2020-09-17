@@ -20,7 +20,7 @@
         SELECT user_id,user_nick_name,user_gender,user_birth,user_real_name,user_phone_number,user_email,
              user_career,user_description,city_name
         FROM user
-        WHERE uesr_id = #{user_id}
+        WHERE user_id = #{user_id}
     </select>
 
     <update id="alterUserInfo" parameterType="com.cxtx.user.User">
