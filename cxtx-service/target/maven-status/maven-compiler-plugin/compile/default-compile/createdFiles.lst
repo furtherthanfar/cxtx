@@ -4,3 +4,4 @@ com\cxtx\site\SitePictureService.class
 com\cxtx\account\AccountService.class
 com\cxtx\site\SiteService.class
 com\cxtx\user\UserService.class
+com\cxtx\route\RouteService.class

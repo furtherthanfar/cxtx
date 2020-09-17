@@ -1,5 +1,6 @@
 com\cxtx\account\AccountMapper.class
 com\cxtx\user\UserMapper.class
+com\cxtx\route\RouteMapper.class
 com\cxtx\wallet\WalletMapper.class
 com\cxtx\province\ProvinceDao.class
 com\cxtx\site\SiteMapper.class

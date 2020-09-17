@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.cxtx.route.RouteMapper">
+    <!--插入 一个 新的 路线-->
+    <insert id="insertRoute" parameterType="com.cxtx.route.Route" useGeneratedKeys="true" keyProperty="id" keyColumn="route_id">
+        INSERT INTO
+        route(route_id, route_name, route_description)
+        VALUES
+        (#{id}, #{name}, #{description})
+    </insert>
+
+    <!--把路线和景点的对应关系插入数据库-->
+    <insert id="insertRouteSites" parameterType="com.cxtx.route.RouteSite">
+        INSERT INTO
+        route_site(route_id, site_id, order_num)
+        VALUES
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item.route_id},#{item.site_id},#{item.rank_num}
+        </foreach>
+    </insert>
+
+    <!--查找所有的路线-->
+    <select id="selectAllRoutes" resultMap="routeMap">
+        SELECT
+        route_id, route_name, route_description
+        FROM
+        route
+    </select>
+    <!--根据 路线ID 查找出该路线所有的对应关系-->
+    <select id="selectRouteSiteByRid" parameterType="java.lang.Integer" resultMap="routeSiteMap">
+        SELECT
+        route_id, site_id, rank_num
+        FROM
+        route_site
+        WHERE
+        route_id = #{route_id}
+        ORDER BY
+        rank_num
+        ASC
+    </select>
+
+    <resultMap id="routeMap" type="com.cxtx.route.Route">
+        <id property="id" column="route_id"></id>
+        <result property="name" column="route_name"></result>
+        <result property="description" column="route_description"></result>
+        <collection property="routeSites" ofType="com.cxtx.route.RouteSite" javaType="java.util.ArrayList" select="selectRouteSiteByRid" column="route_id"></collection>
+    </resultMap>
+
+    <resultMap id="routeSiteMap" type="com.cxtx.route.RouteSite">
+        <id property="route_id" column="route_id"></id>
+        <id property="site_id" column="site_id"></id>
+        <result property="rank_num" column="rank_num"></result>
+    </resultMap>
+</mapper>

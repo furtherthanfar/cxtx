@@ -1,3 +1,4 @@
+com\cxtx\route\RouteController.class
 com\cxtx\interceptor\UserInterceptor.class
 com\cxtx\site\SiteController.class
 com\cxtx\interceptor\InterceptorConfiguration.class
