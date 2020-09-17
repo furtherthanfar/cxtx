@@ -1,0 +1,39 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]" date="1600334745746" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2020/9/17 17:25 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" />
+    <option name="AFTER_PATH" value="cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]/cxtx-web-0.0.1-SNAPSHOT.jar.original" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]/cxtx-util-0.0.1-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]/cxtx-dao-0.0.1-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]/cxtx-service-0.0.1-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]/cxtx-pojo-0.0.1-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25_[Default_Changelist]/cxtx-web-0.0.1-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cxtx-web/target/classes/com/cxtx/interceptor/IndexViewConfig.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
