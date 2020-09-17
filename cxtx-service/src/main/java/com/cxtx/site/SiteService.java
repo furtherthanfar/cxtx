@@ -46,4 +46,14 @@ public class SiteService {
     public List<SitePicture> select1PicturesBySiteId(int site_id, RowBounds rowBounds){
         return siteMapper.selectPicturesBySiteId(site_id, new RowBounds(0, 1));
     }
+
+
+    /**
+     * 插入一个新的Site
+     * @param site
+     * @return
+     */
+    public int insertSite(Site site){
+        return siteMapper.insertSite(site);
+    }
 }

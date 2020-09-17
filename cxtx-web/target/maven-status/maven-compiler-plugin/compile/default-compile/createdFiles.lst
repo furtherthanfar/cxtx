@@ -1,6 +1,8 @@
-com\cxtx\account\AccountController.class
 com\cxtx\interceptor\UserInterceptor.class
 com\cxtx\site\SiteController.class
-com\cxtx\CxtxApplication.class
 com\cxtx\interceptor\InterceptorConfiguration.class
+com\cxtx\province\ProvinceController.class
+com\cxtx\account\AccountController.class
+com\cxtx\CxtxApplication.class
+com\cxtx\aop\FolderAop.class
 com\cxtx\user\UserController.class

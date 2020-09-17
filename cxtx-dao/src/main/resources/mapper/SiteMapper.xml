@@ -31,6 +31,13 @@
         site_id = #{site_id}
     </select>
 
+    <select id="insertSite" parameterType="com.cxtx.site.Site">
+        INSERT INTO
+        site(site_name, site_description, site_price, site_discount, site_dc_reason, city_name)
+        VALUES
+        #{name},#{description},#{price},#{discount},#{dcReason},#{cityName}
+    </select>
+
     <resultMap id="sitePictureMap" type="com.cxtx.site.SitePicture">
         <id property="id" column="sp_id"></id>
         <result property="path" column="sp_path"></result>
