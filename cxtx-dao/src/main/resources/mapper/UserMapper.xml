@@ -11,8 +11,8 @@
         user(user_nick_name,user_gender,user_birth,user_real_name,user_phone_number,user_email,
              user_career,user_description,city_name)
         VALUES(
-            #{nickName},#{gender},#{birth},#{description},#{phoneNumber},#{email},
-            #{career},#{realName},#{cityName}
+            #{nickName},#{gender},#{birth},#{realName},#{phoneNumber},#{email},
+            #{career},#{description},#{cityName}
         )
     </insert>
 
