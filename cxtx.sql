@@ -11,7 +11,7 @@
  Target Server Version : 80020
  File Encoding         : 65001
 
- Date: 09/09/2020 22:12:45
+ Date: 18/09/2020 09:17:18
 */
 
 SET NAMES utf8mb4;
@@ -23,15 +23,13 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `account`;
 CREATE TABLE `account`  (
   `account_id` int(0) NOT NULL AUTO_INCREMENT,
-  `account_username` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `account_password` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `user_id` int(0) DEFAULT NULL,
+  `account_username` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `account_password` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `user_id` int(0) NOT NULL,
   PRIMARY KEY (`account_id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `account_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE RESTRICT
 ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
-
 
 -- ----------------------------
 -- Table structure for city
@@ -43,7 +41,7 @@ CREATE TABLE `city`  (
   `pid` int(0) DEFAULT NULL,
   PRIMARY KEY (`city`) USING BTREE,
   INDEX `pid`(`pid`) USING BTREE,
-  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `provincial` (`pid`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -148,9 +146,9 @@ INSERT INTO `city` VALUES (4, '固原市', 30);
 INSERT INTO `city` VALUES (5, '图木舒克市', 31);
 INSERT INTO `city` VALUES (3, '基隆市', 7);
 INSERT INTO `city` VALUES (20, '塔城市', 31);
-INSERT INTO `city` VALUES (6, '大 庆 市', 10);
 INSERT INTO `city` VALUES (13, '大兴安岭地区', 10);
 INSERT INTO `city` VALUES (2, '大同市', 6);
+INSERT INTO `city` VALUES (6, '大庆市', 10);
 INSERT INTO `city` VALUES (13, '大理白族自治州', 25);
 INSERT INTO `city` VALUES (2, '大连市', 8);
 INSERT INTO `city` VALUES (4, '天水市', 21);
@@ -425,15 +423,15 @@ INSERT INTO `city` VALUES (5, '马鞍山市', 13);
 INSERT INTO `city` VALUES (17, '驻马店市', 17);
 INSERT INTO `city` VALUES (19, '高雄县', 7);
 INSERT INTO `city` VALUES (2, '高雄市', 7);
-INSERT INTO `city` VALUES (5, '鸡 西 市', 10);
-INSERT INTO `city` VALUES (3, '鹤 岗 市', 10);
+INSERT INTO `city` VALUES (5, '鸡西市', 10);
 INSERT INTO `city` VALUES (6, '鹤壁市', 17);
+INSERT INTO `city` VALUES (3, '鹤岗市', 10);
 INSERT INTO `city` VALUES (6, '鹰潭市', 15);
 INSERT INTO `city` VALUES (10, '黄冈市', 18);
 INSERT INTO `city` VALUES (4, '黄南藏族自治州', 26);
 INSERT INTO `city` VALUES (9, '黄山市', 13);
 INSERT INTO `city` VALUES (2, '黄石市', 18);
-INSERT INTO `city` VALUES (11, '黑 河 市', 10);
+INSERT INTO `city` VALUES (11, '黑河市', 10);
 INSERT INTO `city` VALUES (8, '黔东南苗族侗族自治州', 23);
 INSERT INTO `city` VALUES (9, '黔南布依族苗族自治州', 23);
 INSERT INTO `city` VALUES (7, '黔西南布依族苗族自治州', 23);
@@ -441,52 +439,70 @@ INSERT INTO `city` VALUES (2, '齐齐哈尔市', 10);
 INSERT INTO `city` VALUES (8, '龙岩市', 14);
 
 -- ----------------------------
--- Table structure for provincial
+-- Table structure for order
 -- ----------------------------
-DROP TABLE IF EXISTS `provincial`;
-CREATE TABLE `provincial`  (
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE `order`  (
+  `order_id` int(0) NOT NULL AUTO_INCREMENT COMMENT '订单ID号',
+  `order_encoding` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '订单编号',
+  `route_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '购买的路线名称',
+  `account_username` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '订单用户名',
+  `order_total_price` float(10, 2) NOT NULL COMMENT '原价',
+  `order_reduce_price` float(10, 2) NOT NULL COMMENT '优惠减免',
+  `order_actual_price` float(10, 2) NOT NULL COMMENT '实际价格',
+  `order_creat_time` date NOT NULL COMMENT '订单创建日期',
+  `order_pay_time` date NOT NULL COMMENT '订单支付日期',
+  `order_note` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '订单备注',
+  PRIMARY KEY (`order_id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for province
+-- ----------------------------
+DROP TABLE IF EXISTS `province`;
+CREATE TABLE `province`  (
   `pid` int(0) NOT NULL,
-  `Provincial` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `province` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`pid`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of provincial
+-- Records of province
 -- ----------------------------
-INSERT INTO `provincial` VALUES (1, '北京市');
-INSERT INTO `provincial` VALUES (2, '天津市');
-INSERT INTO `provincial` VALUES (3, '上海市');
-INSERT INTO `provincial` VALUES (4, '重庆市');
-INSERT INTO `provincial` VALUES (5, '河北省');
-INSERT INTO `provincial` VALUES (6, '山西省');
-INSERT INTO `provincial` VALUES (7, '台湾省');
-INSERT INTO `provincial` VALUES (8, '辽宁省');
-INSERT INTO `provincial` VALUES (9, '吉林省');
-INSERT INTO `provincial` VALUES (10, '黑龙江省');
-INSERT INTO `provincial` VALUES (11, '江苏省');
-INSERT INTO `provincial` VALUES (12, '浙江省');
-INSERT INTO `provincial` VALUES (13, '安徽省');
-INSERT INTO `provincial` VALUES (14, '福建省');
-INSERT INTO `provincial` VALUES (15, '江西省');
-INSERT INTO `provincial` VALUES (16, '山东省');
-INSERT INTO `provincial` VALUES (17, '河南省');
-INSERT INTO `provincial` VALUES (18, '湖北省');
-INSERT INTO `provincial` VALUES (19, '湖南省');
-INSERT INTO `provincial` VALUES (20, '广东省');
-INSERT INTO `provincial` VALUES (21, '甘肃省');
-INSERT INTO `provincial` VALUES (22, '四川省');
-INSERT INTO `provincial` VALUES (23, '贵州省');
-INSERT INTO `provincial` VALUES (24, '海南省');
-INSERT INTO `provincial` VALUES (25, '云南省');
-INSERT INTO `provincial` VALUES (26, '青海省');
-INSERT INTO `provincial` VALUES (27, '陕西省');
-INSERT INTO `provincial` VALUES (28, '广西壮族自治区');
-INSERT INTO `provincial` VALUES (29, '西藏自治区');
-INSERT INTO `provincial` VALUES (30, '宁夏回族自治区');
-INSERT INTO `provincial` VALUES (31, '新疆维吾尔自治区');
-INSERT INTO `provincial` VALUES (32, '内蒙古自治区');
-INSERT INTO `provincial` VALUES (33, '澳门特别行政区');
-INSERT INTO `provincial` VALUES (34, '香港特别行政区');
+INSERT INTO `province` VALUES (1, '北京市');
+INSERT INTO `province` VALUES (2, '天津市');
+INSERT INTO `province` VALUES (3, '上海市');
+INSERT INTO `province` VALUES (4, '重庆市');
+INSERT INTO `province` VALUES (5, '河北省');
+INSERT INTO `province` VALUES (6, '山西省');
+INSERT INTO `province` VALUES (7, '台湾省');
+INSERT INTO `province` VALUES (8, '辽宁省');
+INSERT INTO `province` VALUES (9, '吉林省');
+INSERT INTO `province` VALUES (10, '黑龙江省');
+INSERT INTO `province` VALUES (11, '江苏省');
+INSERT INTO `province` VALUES (12, '浙江省');
+INSERT INTO `province` VALUES (13, '安徽省');
+INSERT INTO `province` VALUES (14, '福建省');
+INSERT INTO `province` VALUES (15, '江西省');
+INSERT INTO `province` VALUES (16, '山东省');
+INSERT INTO `province` VALUES (17, '河南省');
+INSERT INTO `province` VALUES (18, '湖北省');
+INSERT INTO `province` VALUES (19, '湖南省');
+INSERT INTO `province` VALUES (20, '广东省');
+INSERT INTO `province` VALUES (21, '甘肃省');
+INSERT INTO `province` VALUES (22, '四川省');
+INSERT INTO `province` VALUES (23, '贵州省');
+INSERT INTO `province` VALUES (24, '海南省');
+INSERT INTO `province` VALUES (25, '云南省');
+INSERT INTO `province` VALUES (26, '青海省');
+INSERT INTO `province` VALUES (27, '陕西省');
+INSERT INTO `province` VALUES (28, '广西壮族自治区');
+INSERT INTO `province` VALUES (29, '西藏自治区');
+INSERT INTO `province` VALUES (30, '宁夏回族自治区');
+INSERT INTO `province` VALUES (31, '新疆维吾尔自治区');
+INSERT INTO `province` VALUES (32, '内蒙古自治区');
+INSERT INTO `province` VALUES (33, '澳门特别行政区');
+INSERT INTO `province` VALUES (34, '香港特别行政区');
 
 -- ----------------------------
 -- Table structure for route
@@ -497,7 +513,9 @@ CREATE TABLE `route`  (
   `route_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '路线名称',
   `route_description` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '路线描述',
   PRIMARY KEY (`route_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+
 
 -- ----------------------------
 -- Table structure for route_site
@@ -506,12 +524,14 @@ DROP TABLE IF EXISTS `route_site`;
 CREATE TABLE `route_site`  (
   `route_id` int(0) NOT NULL COMMENT '路线ID',
   `site_id` int(0) NOT NULL COMMENT '景点ID',
-  `order_num` int(0) NOT NULL COMMENT '排序',
+  `rank_num` int(0) DEFAULT NULL,
   PRIMARY KEY (`route_id`, `site_id`) USING BTREE,
   INDEX `site_id`(`site_id`) USING BTREE,
   CONSTRAINT `route_site_ibfk_1` FOREIGN KEY (`route_id`) REFERENCES `route` (`route_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `route_site_ibfk_2` FOREIGN KEY (`site_id`) REFERENCES `site` (`site_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+
 
 -- ----------------------------
 -- Table structure for site
@@ -528,11 +548,8 @@ CREATE TABLE `site`  (
   PRIMARY KEY (`site_id`) USING BTREE,
   INDEX `city_name`(`city_name`) USING BTREE,
   CONSTRAINT `site_ibfk_1` FOREIGN KEY (`city_name`) REFERENCES `city` (`city`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Records of site
--- ----------------------------
 
 
 -- ----------------------------
@@ -546,11 +563,8 @@ CREATE TABLE `spicture`  (
   PRIMARY KEY (`sp_id`) USING BTREE,
   INDEX `site_id`(`site_id`) USING BTREE,
   CONSTRAINT `spicture_ibfk_1` FOREIGN KEY (`site_id`) REFERENCES `site` (`site_id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Records of spicture
--- ----------------------------
 
 
 -- ----------------------------
@@ -566,18 +580,12 @@ CREATE TABLE `user`  (
   `user_phone_number` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '电话号码',
   `user_email` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'Email',
   `user_career` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '职业',
-  `user_head` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '头像地址',
   `user_description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '个性签名',
   `city_name` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '城市名',
   PRIMARY KEY (`user_id`) USING BTREE,
   INDEX `city_name`(`city_name`) USING BTREE,
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`city_name`) REFERENCES `city` (`city`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of user
--- ----------------------------
-
 
 -- ----------------------------
 -- Table structure for wallet
@@ -592,10 +600,5 @@ CREATE TABLE `wallet`  (
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `wallet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of wallet
--- ----------------------------
-
 
 SET FOREIGN_KEY_CHECKS = 1;
