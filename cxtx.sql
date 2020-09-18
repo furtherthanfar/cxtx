@@ -11,7 +11,7 @@
  Target Server Version : 80020
  File Encoding         : 65001
 
- Date: 18/09/2020 09:17:18
+ Date: 18/09/2020 16:45:18
 */
 
 SET NAMES utf8mb4;
@@ -30,6 +30,8 @@ CREATE TABLE `account`  (
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `account_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE RESTRICT
 ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+
 
 -- ----------------------------
 -- Table structure for city
@@ -568,6 +570,22 @@ CREATE TABLE `spicture`  (
 
 
 -- ----------------------------
+-- Table structure for strategy
+-- ----------------------------
+DROP TABLE IF EXISTS `strategy`;
+CREATE TABLE `strategy`  (
+  `strategy_id` int(0) NOT NULL AUTO_INCREMENT,
+  `strategy_time` datetime(0) NOT NULL,
+  `strategy_content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `user_id` int(0) NOT NULL,
+  PRIMARY KEY (`strategy_id`) USING BTREE,
+  INDEX `user_id`(`user_id`) USING BTREE,
+  CONSTRAINT `strategy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE RESTRICT
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -587,6 +605,8 @@ CREATE TABLE `user`  (
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`city_name`) REFERENCES `city` (`city`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
+
+
 -- ----------------------------
 -- Table structure for wallet
 -- ----------------------------
@@ -600,5 +620,7 @@ CREATE TABLE `wallet`  (
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `wallet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+
 
 SET FOREIGN_KEY_CHECKS = 1;
