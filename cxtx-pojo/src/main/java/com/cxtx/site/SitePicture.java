@@ -2,8 +2,10 @@ package com.cxtx.site;
 
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
+
 @Component
-public class SitePicture {
+public class SitePicture implements Serializable {
 
     // 图片 ID
     private int id;
