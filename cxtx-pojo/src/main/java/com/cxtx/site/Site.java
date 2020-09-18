@@ -3,11 +3,12 @@ package com.cxtx.site;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Component
 @Scope(scopeName = "prototype")
-public class Site {
+public class Site implements Serializable {
 
     // 景点ID
     private int id;
