@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.cxtx.strategy.StrategyDao">
+
+    <!--插入一个攻略-->
+    <insert id="inertStrategy" parameterType="com.cxtx.strategy.Strategy">
+        INSERT INTO
+        strategy(strategy_time, strategy_content, user_id)
+        VALUES
+        (#{time}, #{content}, #{user.id})
+    </insert>
+
+    <!--查找所有的攻略-->
+    <select id="selectAllStrategies" resultMap="strategyMap">
+        SELECT strategy_id, strategy_time, strategy_content, user_id
+        FROM
+        strategy
+    </select>
+
+    <select id="selectStrategiesByUserId" resultMap="strategyMap">
+        SELECT strategy_id, strategy_time, strategy_content, user_id
+        FROM
+        strategy
+        where
+        user_id = #{user_id}
+    </select>
+
+    <resultMap id="strategyMap" type="com.cxtx.strategy.Strategy">
+        <id property="id" column="strategy_id"></id>
+        <result property="time" column="strategy_time"></result>
+        <result property="content" column="strategy_content"></result>
+        <association property="user" javaType="com.cxtx.user.User" select="com.cxtx.user.UserMapper.selectUserById" column="user_id"></association>
+    </resultMap>
+</mapper>

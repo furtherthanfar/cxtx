@@ -19,18 +19,32 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/lqkbase" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:strategy(Related)" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b5cc07-e1a8-4416-9389-339107970cfd" name="Default Changelist" comment="配合前端修改配置">
+      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/java/com/cxtx/strategy/StrategyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/StrategyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-pojo/src/main/java/com/cxtx/strategy/Strategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-service/src/main/java/com/cxtx/strategy/StrategyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cxtx-web/src/main/java/com/cxtx/strategy/StrategyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_20__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_20__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-web/src/main/java/com/cxtx/config/IndexViewConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/src/main/java/com/cxtx/config/IndexViewConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-web/src/main/java/com/cxtx/inteceptor/IndexViewConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/inteceptor/IndexViewConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/interceptor/IndexViewConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
@@ -98,7 +112,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cxtx-service/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -108,21 +122,22 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\cxtx\cxtx-web\src\main\java\com\cxtx\inteceptor" />
-      <recent name="E:\IdeaProjects\cxtx" />
-      <recent name="E:\IdeaProjects\cxtx\cxtx-account\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\cxtx\cxtx-dao\src\main\resources\mapper" />
+      <recent name="E:\IdeaProjects\cxtx\cxtx-service\src\main\java\com\cxtx" />
+      <recent name="E:\IdeaProjects\cxtx\cxtx-dao\src\main\java\com\cxtx" />
+      <recent name="E:\IdeaProjects\cxtx\cxtx-pojo\src\main\java\com\cxtx" />
+      <recent name="E:\IdeaProjects\cxtx\cxtx-web\src\main\java\com\cxtx" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cxtx" />
       <recent name="com.cxtx.account" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\cxtx\cxtx-service\src\main\resources" />
-      <recent name="E:\IdeaProjects\cxtx\cxtx-dao\src\main\resources" />
-      <recent name="E:\IdeaProjects\cxtx\cxtx-web\src\main\resources" />
-      <recent name="E:\IdeaProjects\cxtx\src\main\resources" />
-      <recent name="E:\IdeaProjects\cxtx\cxtx-pojo\src\main\java\com\cxtx" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\cxtx\cxtx-web\src\main\java\com\cxtx" />
+      <recent name="E:\IdeaProjects\cxtx\cxtx-web\src\main\java\com\cxtx\inteceptor" />
+      <recent name="E:\IdeaProjects\cxtx" />
+      <recent name="E:\IdeaProjects\cxtx\cxtx-account\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -362,7 +377,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/lqkbase" />
+                        <option value="strategy(Related)" />
                       </list>
                     </value>
                   </entry>
@@ -449,22 +464,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599789663418" />
-    <state width="1269" height="324" key="GridCell.Tab.0.bottom" timestamp="1600350513170">
+    <state width="1330" height="248" key="GridCell.Tab.0.bottom" timestamp="1600417573464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1269" height="324" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600350513170" />
-    <state width="1269" height="324" key="GridCell.Tab.0.center" timestamp="1600350513170">
+    <state width="1330" height="248" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600417573464" />
+    <state width="1330" height="248" key="GridCell.Tab.0.center" timestamp="1600417573464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1269" height="324" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600350513170" />
-    <state width="1269" height="324" key="GridCell.Tab.0.left" timestamp="1600350513170">
+    <state width="1330" height="248" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600417573464" />
+    <state width="1330" height="248" key="GridCell.Tab.0.left" timestamp="1600417573463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1269" height="324" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600350513170" />
-    <state width="1269" height="324" key="GridCell.Tab.0.right" timestamp="1600350513170">
+    <state width="1330" height="248" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600417573463" />
+    <state width="1330" height="248" key="GridCell.Tab.0.right" timestamp="1600417573464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1269" height="324" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600350513170" />
+    <state width="1330" height="248" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600417573464" />
     <state width="1269" height="324" key="GridCell.Tab.1.bottom" timestamp="1600350513003">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
