@@ -19,37 +19,92 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:strategy(Related)" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/strategy(Related)" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b5cc07-e1a8-4416-9389-339107970cfd" name="Default Changelist" comment="配合前端修改配置">
-      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/java/com/cxtx/strategy/StrategyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/StrategyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-pojo/src/main/java/com/cxtx/strategy/Strategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-service/src/main/java/com/cxtx/strategy/StrategyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cxtx-web/src/main/java/com/cxtx/strategy/StrategyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_20__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_20__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_9_17_17_25__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/com/cxtx/account/AccountMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/com/cxtx/province/ProvinceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/com/cxtx/route/RouteMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/com/cxtx/site/SiteMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/com/cxtx/site/SitePictureMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/com/cxtx/user/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/com/cxtx/wallet/WalletMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/mapper/AccountMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/mapper/ProvinceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/mapper/RouteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/mapper/SiteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/mapper/SitePictureMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/classes/mapper/WalletMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/cxtx-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/account/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/city/City.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/province/Province.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/route/Route.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/route/RouteSite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/site/Site.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/site/SitePicture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/user/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/classes/com/cxtx/wallet/Wallet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/cxtx-pojo-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-pojo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/account/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/province/ProvinceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/route/RouteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/site/SitePictureService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/site/SiteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/user/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/classes/com/cxtx/wallet/WalletService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/cxtx-service-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/classes/com/cxtx/swagger/SwaggerConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/classes/com/cxtx/util/ContextUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/classes/com/cxtx/util/ImageUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/classes/com/cxtx/util/UtilBeanConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/cxtx-util-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-util/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/CxtxApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/account/AccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/aop/FolderAop.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/interceptor/IndexViewConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/province/ProvinceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/route/RouteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/site/SiteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/com/cxtx/user/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/classes/static/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/cxtx-web-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cxtx-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +124,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="cache(Related)" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -161,6 +216,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests#1" />
         <item itemvalue="HTTP Request.generated-requests#1" />
         <item itemvalue="HTTP Request.generated-requests#1" />
       </list>
@@ -377,7 +433,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="strategy(Related)" />
+                        <option value="origin/strategy(Related)" />
                       </list>
                     </value>
                   </entry>
