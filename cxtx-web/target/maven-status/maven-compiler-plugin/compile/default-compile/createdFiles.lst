@@ -1,8 +1,0 @@
-com\cxtx\account\AccountController.class
-com\cxtx\route\RouteController.class
-com\cxtx\site\SiteController.class
-com\cxtx\CxtxApplication.class
-com\cxtx\aop\FolderAop.class
-com\cxtx\config\IndexViewConfig.class
-com\cxtx\province\ProvinceController.class
-com\cxtx\user\UserController.class
