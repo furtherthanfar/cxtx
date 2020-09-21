@@ -67,7 +67,7 @@ public class OrderController {
 
 
     @GetMapping("/getorder")
-    @ApiOperation(value = "根据姓名获得所有订单")
+    @ApiOperation(value = "根据accoutname获得所有订单")
     public List<Order> getOorder(String name){return orderService.selectOrderByUsername(name);}
 }
 
