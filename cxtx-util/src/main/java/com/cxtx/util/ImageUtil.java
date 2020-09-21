@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class ImageUtil {
 
     private static final String[] LIMIT = {".jpg",".png",".jpeg",".bmp"};
-
+    public static final String PATH = "cxtx-web\\src\\main\\resources\\static\\upload\\imgs";
     /**
      * 审查图片格式是否合格
      * @param originalName

@@ -15,4 +15,11 @@ public interface AccountMapper {
     public void updatePassWord(@Param("account_id") int account_id,@Param("passWord") String passWord);
 
     public Account selectAccountByUserId(int user_id);
+
+    /**
+     * 查找有没有这个userName的账户
+     * @param userName
+     * @return
+     */
+    public String selectAccountByUserName(String userName);
 }

@@ -24,17 +24,6 @@ public class AccountController {
     @Autowired
     private UserService userService;
 
-    /**
-     * 前往注册界面
-     * @return
-     */
-    @ApiOperation(value = "去注册界面")
-    @RequestMapping(value = "/toSignUp", method = RequestMethod.GET)
-    public String toSighUp(){
-        System.out.println("进入");
-        return "login";
-    }
-
 
     /**
      * 登录已有的账户
@@ -78,12 +67,12 @@ public class AccountController {
     @RequestMapping(value = "/signUp",method = RequestMethod.POST)
     public String signUp(String userName,String password,
                          String nickName,String gender,
-                         @Nullable Date birth,
-                         @Nullable String description,
+                         Date birth,
+                         String description,
                          String phoneNumber,
-                         @Nullable String email,
-                         @Nullable String career,
-                         @Nullable String realName,
+                         String email,
+                         String career,
+                         String realName,
                          String cityName) {
         // 组装新的account
         Account account = (Account) ContextUtil.getBean("account");

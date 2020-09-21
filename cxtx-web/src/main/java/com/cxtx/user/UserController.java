@@ -28,7 +28,7 @@ public class UserController {
     private ImageUtil imageUtil;
 
     // 文件上传开始
-    public static String userImageDirPath = "D:" + File.separator + "cxtx" + File.separator + "userImages";
+    public static String userImageDirPath = "userImages";
 
     /**
      * 获得用户的全部信息
@@ -72,19 +72,17 @@ public class UserController {
         if(!imageUtil.isImageLegal(image.getOriginalFilename())){
             return "图片格式不正确";
         }
-        // 如果文件夹不存在，创建
-        File dir = new File(userImageDirPath);
-        if (!dir.exists()) {
-            dir.mkdir();
-        }
+
         String filePath = null;
+        String fileName = null;
         // 图片命名计数器
         AtomicInteger imageInteger = (AtomicInteger) ContextUtil.getBean("headImageInteger");
         try {
             String[] split = image.getOriginalFilename().split("\\.");
             // 获得图片编码名称 + 位置
-            filePath = userImageDirPath + File.separator + getHeadImageName(imageInteger) + "." +  split[split.length - 1];
-            File file = new File(filePath);
+            fileName = userImageDirPath + File.separator + getHeadImageName(imageInteger) + "." + split[split.length - 1];
+            filePath = ImageUtil.PATH + File.separator + fileName;
+            File file = new File(new File(filePath).getAbsolutePath());
             // 保存图片
             image.transferTo(file);
         } catch (FileNotFoundException e) {
@@ -92,7 +90,7 @@ public class UserController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return filePath;
+        return "upload\\imgs\\" + fileName;
     }
 
     /**

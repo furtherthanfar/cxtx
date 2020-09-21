@@ -43,6 +43,16 @@
         user_id = #{user_id};
     </select>
 
+    <select id="selectAccountByUserName" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT account_username userName
+        FROM
+        account
+        WHERE
+        account_username = #{userName}
+        LIMIT
+        1
+    </select>
+
     <resultMap id="accountMap" type="com.cxtx.account.Account">
         <id property="id" column="account_id"></id>
         <result property="userName" column="account_username"></result>

@@ -8,7 +8,8 @@
     <!--插入一个攻略-->
     <insert id="inertStrategy" parameterType="com.cxtx.strategy.Strategy">
         INSERT INTO
-        strategy(strategy_time, strategy_content, user_id)
+        strategy
+        (strategy_time, strategy_content, user_id)
         VALUES
         (#{time}, #{content}, #{user.id})
     </insert>
@@ -27,6 +28,10 @@
         where
         user_id = #{user_id}
     </select>
+
+    <delete id="deleteStrategyById" parameterType="java.lang.String">
+        DELETE FROM strategy WHERE  strategy_id = #{strategy_id}
+    </delete>
 
     <resultMap id="strategyMap" type="com.cxtx.strategy.Strategy">
         <id property="id" column="strategy_id"></id>

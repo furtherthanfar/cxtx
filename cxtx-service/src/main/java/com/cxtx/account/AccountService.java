@@ -47,5 +47,11 @@ public class AccountService {
         return accountMapper.selectAccountByUserId(user_id);
     }
 
-
+    /**
+     * 查找有没有这个userName的账户
+     * @return
+     */
+    public String selectAccountByUserName(String userName){
+        return  accountMapper.selectAccountByUserName(userName);
+    }
 }

@@ -35,4 +35,7 @@ public interface StrategyDao {
      */
     public List<Strategy> selectStrategiesByUserId(int user_id);
 
+
+    public void deleteStrategyById(int strategy_id);
+
 }

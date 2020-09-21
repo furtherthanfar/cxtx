@@ -37,8 +37,18 @@ public class UtilBeanConfiguration {
      */
     @Bean(name = "sitePictureInteger")
     @Scope(scopeName = "prototype")
-    public AtomicInteger amoticSitePic(){
+    public AtomicInteger atomicSitePic(){
         return new AtomicInteger(0);
+    }
+
+    /**
+     * 攻略图片计数器
+     * @return
+     */
+    @Bean(name = "strategyImageInteger")
+    @Scope(scopeName = "prototype")
+    public AtomicInteger atomicStrategy(){
+        return new AtomicInteger();
     }
 
     /**

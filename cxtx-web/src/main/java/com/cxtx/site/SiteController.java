@@ -32,7 +32,7 @@ public class SiteController {
     @Autowired
     private ImageUtil imageUtil;
     // 景点图片储存文件夹
-    public static String sitePicDirPath = "D:" + File.separator + "cxtx" + File.separator + "sitePictures";
+    public static String sitePicDirPath = "sitePictures";
 
     @ApiOperation(value = "根据景点ID获得景点信息")
     @ResponseBody
@@ -67,23 +67,23 @@ public class SiteController {
         // 保存每一个文件路径
         List<String> list = new ArrayList<>();
         String filePath = null;
+        String fileName = null;
         // 分别保存各个文件
         for (MultipartFile file : pictures) {
             String[] split = file.getOriginalFilename().split("\\.");
             // 获得图片编码名称 + 位置
-            filePath = sitePicDirPath + File.separator + getSitePicName(imageInteger) + "." +  split[split.length - 1];
-            list.add(filePath);
-            File newFile = new File(filePath);
+            fileName = sitePicDirPath + File.separator+  getSitePicName(imageInteger) + "." + split[split.length - 1];
+            filePath = ImageUtil.PATH + File.separator + fileName;
+            list.add("upload\\imgs\\" + fileName);
+            File newFile = new File(new File(filePath).getAbsolutePath());
             // 保存图片
             try {
                 file.transferTo(newFile);
             } catch (IOException e) {
                 e.printStackTrace();
-                log.debug("异常");
                 return null;
             }
         }
-        log.debug("正常返回");
         return list;
     }
 
