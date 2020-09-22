@@ -7,10 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -93,7 +90,7 @@ public class SiteController {
      * @param site
      * @return
      */
-    @ApiOperation(value = "添加一个新的景点", notes = "标签")
+    @ApiOperation(value = "添加一个新的景点")
     @ResponseBody
     @RequestMapping(value = "/addNewSite", method = RequestMethod.POST)
     public String addNewSite(@RequestBody Site site) {
@@ -103,6 +100,14 @@ public class SiteController {
         return "failure";
     }
 
+    @ApiOperation(value = "根据ID删除景点")
+    @ResponseBody
+    @PostMapping(value = "/deleteById")
+    public String deleteById(String siteId){
+        int site_id = Integer.parseInt(siteId);
+        siteService.deleteSiteById(site_id);
+        return "success";
+    }
 
     /**
      * 获得头像的编码

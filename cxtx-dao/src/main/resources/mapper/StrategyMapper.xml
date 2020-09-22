@@ -29,7 +29,7 @@
         user_id = #{user_id}
     </select>
 
-    <delete id="deleteStrategyById" parameterType="java.lang.String">
+    <delete id="deleteStrategyById" parameterType="java.lang.Integer">
         DELETE FROM strategy WHERE  strategy_id = #{strategy_id}
     </delete>
 

@@ -38,4 +38,9 @@ public interface SiteMapper {
      */
     public int insertSite(Site site);
 
+    /**
+     * 删除一个Site
+     * @param site_id
+     */
+    public void deleteSiteById(int site_id);
 }

@@ -38,6 +38,10 @@
         #{name},#{description},#{price},#{discount},#{dcReason},#{cityName}
     </select>
 
+    <delete id="deleteSiteById" parameterType="java.lang.Integer">
+        DELETE FROM site WHERE site_id = #{site_id}
+    </delete>
+
     <resultMap id="sitePictureMap" type="com.cxtx.site.SitePicture">
         <id property="id" column="sp_id"></id>
         <result property="path" column="sp_path"></result>

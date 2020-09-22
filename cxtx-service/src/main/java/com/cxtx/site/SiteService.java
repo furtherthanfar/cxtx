@@ -79,7 +79,6 @@ public class SiteService {
         return siteMapper.selectPicturesBySiteId(site_id, new RowBounds(0, 10000));
     }
 
-
     /**
      * 根据景区ID查找景区的一个图片
      *
@@ -91,7 +90,6 @@ public class SiteService {
         return siteMapper.selectPicturesBySiteId(site_id, new RowBounds(0, 1));
     }
 
-
     /**
      * 插入一个新的Site
      *
@@ -100,5 +98,22 @@ public class SiteService {
      */
     public int insertSite(Site site) {
         return siteMapper.insertSite(site);
+    }
+
+    /**
+     * 删除一个Site
+     * @param site_id
+     */
+    public void deleteSiteById(int site_id){
+        // Redis 的 Key
+        String key = RedisNameConfig.PRE + "AllSites" + RedisNameConfig.SUF_HASH;
+        // Redis 的 Field
+        String hashKey = String.valueOf(site_id);
+        redisTemplate.setKeySerializer(RedisNameConfig.STRING_REDIS_SERIALIZER);
+        redisTemplate.setHashKeySerializer(RedisNameConfig.STRING_REDIS_SERIALIZER);
+        // 缓存删除
+        redisTemplate.opsForHash().delete(key, hashKey);
+        // 数据库删除
+        siteMapper.deleteSiteById(site_id);
     }
 }
