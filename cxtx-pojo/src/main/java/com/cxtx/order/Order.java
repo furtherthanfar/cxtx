@@ -14,7 +14,7 @@ import java.util.Date;
 public class Order {
     private int orderId;
     private String orderEncoding;
-    private int orderSiteId;
+    private String orderSiteName;
     private String routeName;
     private String accountUsername;
     private float orderTotalPrice;
@@ -25,10 +25,10 @@ public class Order {
     private String orderNote;
 
 
-    public void build(int orderId, String orderEncoding, int orderSiteId, String routeName, String accountUsername, float orderTotalPrice, float orderReducePrice, float orderActualPrice, Timestamp orderCreatTime, Timestamp orderPayTime, String orderNote) {
+    public void build(int orderId, String orderEncoding, String orderSiteName, String routeName, String accountUsername, float orderTotalPrice, float orderReducePrice, float orderActualPrice, Timestamp orderCreatTime, Timestamp orderPayTime, String orderNote) {
         this.orderId = orderId;
         this.orderEncoding = orderEncoding;
-        this.orderSiteId = orderSiteId;
+        this.orderSiteName = orderSiteName;
         this.routeName = routeName;
         this.accountUsername = accountUsername;
         this.orderTotalPrice = orderTotalPrice;

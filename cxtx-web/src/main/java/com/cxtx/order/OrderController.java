@@ -28,8 +28,8 @@ public class OrderController {
     @PostMapping("/createorder")
     @ApiOperation(value ="创建订单")
     public String addOrder(
-            String orderEncoding,
-            int orderSiteId,
+    //        String orderEncoding,
+            String orderSiteName,
             String routeName,
             String accoutUserName,
             float orderTotalPrice,
@@ -49,10 +49,13 @@ public class OrderController {
         Timestamp timeStamp = new Timestamp(date.getTime());
         Timestamp orderCreatTime =timeStamp;
         Timestamp orderPayTime =timeStamp;
+
+        //生成订单拜编码 用户名+景点id+金额+时间
+        String orderEncoding =  accoutUserName+orderSiteName+orderActualPrice+orderCreatTime.toString();
         Order order = (Order) ContextUtil.getBean("order");
         order.build(0,
                 orderEncoding,
-                orderSiteId,
+                orderSiteName,
                 routeName,
                 accoutUserName,
                 orderTotalPrice,
