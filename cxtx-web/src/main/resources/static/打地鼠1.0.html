@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>放輕鬆®打地鼠</title> 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script
+src="http://code.jquery.com/color/jquery.color.plus-names-2.2.0.min.js"
+integrity="sha256-97quMNaesEFsrV6uexbIR3+D1V1+75CVDXuLBFQ07lA="
+crossorigin="anonymous"></script>
+  
+  
+<style>
+h1.scoredisplay{
+	color: #FFFFFF;
+	size: 60;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+	
+div.enemy
+	{
+		width:150px;
+		height:150px;
+		background: darkslateblue;
+		margin: auto;
+	} 
+
+body.steamwavecolorchange
+{
+	background:#c5ffe2;
+	
+	animation:myfirst 5s;
+	-moz-animation:myfirst 5s; /* Firefox */
+	-webkit-animation:myfirst 5s; /* Safari and Chrome */
+	-o-animation:myfirst 5s; /* Opera */
+	
+	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	
+	animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-webkit-animation-direction: alternate;
+	-o-animation-direction: alternate;
+
+}
+
+@keyframes myfirst
+{
+	0%   {background:#c5ffe2;}
+	50%  {background:#b9eaff;}
+	100% {background:#f0d7ff;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+	0%   {background:#c5ffe2;}
+	50%  {background:#b9eaff;}
+	100% {background:#f0d7ff;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	0%   {background:#c5ffe2;}
+	50%  {background:#b9eaff;}
+	100% {background:#f0d7ff;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+	0%   {background:#c5ffe2;}
+	50%  {background:#b9eaff;}
+	100% {background:#f0d7ff;}
+}
+</style>
+  
+<script>
+var maxhp=1000;
+var hp=maxhp;
+var score=0;
+var currentcombo=1;
+
+var ingame;
+
+function add(n){
+	if(hp>0&&hp<maxhp){
+		hp+=n;
+		if(hp>maxhp){
+			hp=maxhp;
+		}
+		var pencentage=(hp/maxhp)*100;
+		var widnum=pencentage+"%";
+		$("#upperui").css("width",widnum);
+	}
+}
+
+function minus(n){
+	if(hp>0){
+		hp-=n;
+		if(hp<0){
+			hp=0;
+		}
+		var pencentage=(hp/maxhp)*100;
+		var widnum=pencentage+"%";
+		$("#upperui").css("width",widnum);
+	}
+	if(hp<=0){
+		$("#health").text("遊戲結束，總分數："+score+"\n點擊這裡返回主選單或按r重新開始");
+		
+	}
+}
+
+function addscore(n){
+	if(hp>0){
+			score+=n;
+			$("#health").text(currentcombo+"——連 擊   ☆   分 數——"+score);
+	}
+}
+
+
+$(document).ready(function(){
+  $("#health").click(function(){
+	  if(hp==0){
+		  enterstartmode();
+	  }
+	});
+})
+
+function radomcolor( crange ){
+	var selecter=Math.floor(Math.random()*crange);
+	switch(selecter)
+	{
+		
+	    case 0:
+	        return "DeepPink";
+	        break;
+	    case 1:
+	        return "Orange";
+	        break;
+		case 2:
+		    return "LimeGreen";
+		    break;
+		case 3:
+		    return "MediumSlateBlue";
+		    break;
+		case 4:
+	        return "#f1f147";
+		    break;
+		case 5:
+		    break;
+	    default:
+	        return "darkslateblue";
+	}
+	return "darkslateblue";
+}
+
+
+function hitenemy( targetid ){
+	var enemyid="#"+targetid;
+	if($(enemyid).css("opacity")==1){
+		if($(enemyid).css("background")==$("#upperui").css("background")){
+			currentcombo++;
+		}
+		else{
+			currentcombo=1;
+		}
+		$("#upperui").css("background",$(enemyid).css("background"));
+		if(currentcombo==1){
+			add(15);
+		}
+		else if(currentcombo<10){
+			add(50*currentcombo);
+		}
+		else{
+			add(500);
+		}
+		addscore(currentcombo);
+		$("#health").text(currentcombo+"——連 擊   ☆   分 數——"+score);
+		$(enemyid).animate({opacity:'0.0001',width:'70px'},200,function(){document.getElementById(targetid).innerHTML="";$(enemyid).css("background",radomcolor(4));$(enemyid).delay(Math.random()*2000).animate({opacity:'1',width:'150px'},300)});
+	}
+}
+
+function enterstartmode(){
+	clearInterval(ingame);
+	$("#upperui").css("background","rgba(0,0,0,0)");
+	$("#playboard").empty();
+	$("#health").text("じ☆ 蒸 芞 Ъo 打 哋 鼠 ☆じ");
+	$("#playboard").append("<center><h1 onclick=\"entergamemode()\">開始遊戲</h1></center><br><center><h1 onclick=\"enterindex()\">遊戲說明</h1></center><br><center><h1 onclick=\"enterrank()\">排 行 榜</h1></center>");
+}
+
+function entergamemode(){
+	clearInterval(ingame);
+	hp=maxhp;
+	score=0;
+	currentcombo=0;
+	$("#upperui").css("background","darkslateblue");
+	$("#background").addClass("steamwavecolorchange");
+	document.getElementById("BGM").play();
+	$("#playboard").empty();
+	$("#health").text(currentcombo+"——連 擊   ☆   分 數——"+score);
+
+	var ts="<div id=\"cer\" style=\"display:flex;justify-content:center;\">";
+	var t1="<div style=\"width:200px;\"><div id=\"e7\" class=\"enemy\"></div><br><div id=\"e4\" class=\"enemy\"></div><br><div id=\"e1\" class=\"enemy\"></div></div>";
+	var t2="<div style=\"width:200px;\"><div id=\"e8\" class=\"enemy\"></div><br><div id=\"e5\" class=\"enemy\"></div><br><div id=\"e2\" class=\"enemy\"></div></div>";
+	var t3="<div style=\"width:200px;\"><div id=\"e9\" class=\"enemy\"></div><br><div id=\"e6\" class=\"enemy\"></div><br><div id=\"e3\" class=\"enemy\"></div></div>";
+	var te="</div>";
+	var ta=ts+t1+t2+t3+te;
+	$("#playboard").append(ta);
+	
+
+	$(".enemy").click(function(){
+		hitenemy($(this).attr('id'));
+	});
+	
+	document.addEventListener("keydown",keydown);
+	
+	ingame=setInterval("minus(1)",4);
+}
+
+function enterindex(){
+	clearInterval(ingame);
+	$("#upperui").css("background","rgba(0,0,0,0)");
+	$("#playboard").empty();
+	$("#health").text("放輕鬆®打地鼠軟體v1.0");
+	$("#playboard").append("<center><p>滑鼠點擊顏色方塊或按小鍵盤對應位置按鍵來消除方塊獲得分數</p><p>上方的長條表示剩餘時間，消除方塊也可以恢復剩餘時間</p><p>連續消除同色方塊獲得combo，可以得到更高的加分以及恢復更多時間</p></center><br><center><h1 onclick=\"enterstartmode()\">點擊這裡返回主選單</h1></center>");
+}
+
+function enterrank(){
+	
+}
+
+function keydown(event){
+	    switch(event.keyCode)
+		{
+			case 97:
+				hitenemy("e1");
+				break;
+			case 98:
+				hitenemy("e2");
+				break;
+			case 99:
+				hitenemy("e3");
+				break;
+			case 100:
+				hitenemy("e4");
+				break;
+			case 101:
+				hitenemy("e5");
+				break;
+			case 102:
+				hitenemy("e6");
+				break;
+			case 103:
+				hitenemy("e7");
+				break;
+			case 104:
+				hitenemy("e8");
+				break;
+			case 105:
+				hitenemy("e9");
+				break;
+			case 82:
+				if($("#health").text()!="放輕鬆®打地鼠軟體v1.0" && $("#health").text()!="じ☆ 蒸 芞 Ъo 打 哋 鼠 ☆じ");
+				entergamemode();
+		}
+	}
+
+</script>
+
+
+
+</head>
+<body id="background">
+<audio id="BGM" src="Lopu$%20-%20夜%C2%A0間%C2%A0約%C2%A0會.mp3" loop="loop" preload="auto">
+	当前浏览器不支持audio
+</audio>
+<div id="upper">
+	<br><center><h1><font size="60" id="health" style="opacity: 1;">じ☆ 蒸 芞 Ъo 打 哋 鼠 ☆じ</font></h1></center>
+</div>
+
+<center><div id="upperui",style="height: 10px; width: 100%; opacity: 0.5;"><font style="opacity: 0;">1</font></div></center>
+<br>
+
+<div id="playboard">
+	<center><h1 onclick="entergamemode()">開始遊戲</h1></center><br>
+	<center><h1 onclick="enterindex()">遊戲說明</h1></center><br>
+	<center><h1 onclick="enterrank()">排 行 榜</h1></center>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+*{padding: 0;margin: 0;}
+.search{
+	width: 600px;
+	margin: 50px auto;
+	display: flex;
+}
+.search input{
+	float: left;//左浮动
+	flex: 4;
+	width:80%;
+	height: 40px;
+	outline: none;
+	border: 1px solid lightgrey;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.search button{
+	float: right;
+	width: 60px;
+	height: 40px;
+	background-color: #4CAF50;
+	color: white;
+}
+
+.location{
+	width: 100px;
+	margin: 10px auto;
+	position:absolute;
+	left: 350px;
+	top: 150px;
+}
+
+.location p{
+	font-size: 25px;
+}
+
+.rout {
+	width: 1000px;
+	height: 180px;
+	margin: 60px 0 0 300px;
+	display: flex;
+	background-color: #eeeeee;
+}
+
+.bg-img{
+	min-width: 30%;
+	vertical-align: top;
+	padding: 0;
+	margin-left: 0;
+	height: 100%;
+	background-color: #CAF0D3;
+	display: inline-block;
+	overflow: hidden;
+	background-image: url(../img/huanghelou.jpg);
+	background-size: cover;
+}
+
+.rout p{
+	font-size: 20px;
+	margin: auto;
+}
+
+
+
