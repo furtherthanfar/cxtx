@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.cxtx.order.OrderMapper">
+    <insert id="createOrder" parameterType="com.cxtx.order.Order">
+        INSERT INTO
+        `order`(
+        `order_id`,
+        `order_encoding`,
+        `route_name`,
+        `account_username`,
+        `order_total_price`,
+        `order_reduce_price`,
+        `order_actual_price`,
+        `order_creat_time`,
+        `order_pay_time`,
+        `order_note`,
+        `order_site_id`
+        )
+        values(
+        #{orderId},
+        #{orderEncoding},
+        #{routeName},
+        #{accountUsername},
+        #{orderTotalPrice},
+        #{orderReducePrice},
+        #{orderActualPrice},
+        #{orderCreatTime},
+        #{orderPayTime},
+        #{orderNote},
+        #{orderSiteId}
+        )
+    </insert>
+
+    <select id="selectOrderByUsername" parameterType="java.lang.String" resultMap="orderMap" >
+        select order_id,
+        order_encoding,
+        order_site_id,
+        route_name,
+        account_username,
+        order_total_price,
+        order_reduce_price,
+        order_actual_price,
+        order_creat_time,
+        order_pay_time,
+        order_note
+        from `order`
+        where account_username=#{accountUsername}
+
+    </select>
+
+    <resultMap id="orderMap" type="com.cxtx.order.Order">
+        <id property="orderId" column="order_id"></id>
+        <result property="orderEncoding" column="order_encoding"></result>
+        <result property="orderSiteId" column="order_site_id"></result>
+        <result property="routeName" column="route_name"></result>
+        <result property="accountUsername" column="account_username"></result>
+        <result property="orderTotalPrice" column="order_total_price"></result>
+        <result property="orderReducePrice" column="order_reduce_price"></result>
+        <result property="orderActualPrice" column="order_actual_price"></result>
+        <result property="orderCreatTime" column="order_creat_time"></result>
+        <result property="orderPayTime" column="order_pay_time"></result>
+        <result property="orderNote" column="ordernote"></result>
+
+    </resultMap>
+
+</mapper>
