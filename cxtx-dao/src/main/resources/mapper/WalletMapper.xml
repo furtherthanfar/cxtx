@@ -22,7 +22,7 @@
         user_id = #{user_id};
     </select>
     <!--根据用户id和变化的金额更新钱包余额-->
-    <update id="updateBalanceByUserId" parameterType="java.lang.Integer">
+    <update id="updateBalanceByUserId" >
         UPDATE
         wallet
         SET
@@ -32,6 +32,18 @@
         WHERE
         user_id = #{user_id}
     </update>
+
+    <update id="updateScoreByUserId" >
+        UPDATE
+        wallet
+        SET
+        wallet_score
+        =
+        wallet_score + #{changedScore}
+        WHERE
+        user_id = #{user_id}
+    </update>
+
     <!--钱包的 resultMap-->
     <resultMap id="walletMap" type="com.cxtx.wallet.Wallet">
         <id property="id" column="wallet_id"></id>

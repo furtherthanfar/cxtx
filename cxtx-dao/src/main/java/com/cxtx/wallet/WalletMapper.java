@@ -1,6 +1,7 @@
 package com.cxtx.wallet;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -27,7 +28,7 @@ public interface WalletMapper {
      * @param user_id
      * @param changedBalance
      */
-    public void updateBalanceByUserId(int user_id, double changedBalance);
+    public void updateBalanceByUserId(@Param("user_id") int user_id,@Param("changedBalance") double changedBalance);
 
 
     /**
@@ -35,6 +36,6 @@ public interface WalletMapper {
      * @param user_id
      * @param changedScore
      */
-    public void updateScoreByUserId(int user_id, int changedScore);
+    public void updateScoreByUserId(@Param("user_id")int user_id, @Param("changedScore") int changedScore);
 
 }
