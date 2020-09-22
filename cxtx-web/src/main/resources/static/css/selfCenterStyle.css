@@ -1,0 +1,103 @@
+.inf{
+	width: 1100px;
+	padding: 0;
+	height: 250px;
+	margin: 60px 100px 0 300px;
+	display: flex;
+	background-color: #EEEEEE;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.inf-img{
+	min-width: 5%;
+	vertical-align: top;
+	padding: 0;
+	margin-left: 20px;
+	margin-top: 20px;
+	height: 100px;
+	background-color: #CAF0D3;
+	display: inline-block;
+	overflow: hidden;
+	background-size: cover;
+	border-radius: 50px;
+}
+
+.wallet{
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	display: inline-block;
+	margin-left: 60px;
+	margin-top: 100px;
+}
+
+.wallet p{
+	color: #000000;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.integral{
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 100px;
+}
+
+.integral p{
+	color: #000000;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.selfInf{
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 100px;
+}
+
+.selfInf p{
+	color: #000000;
+	font-size: 20px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.selfInf a{
+	text-decoration: none;
+}
+
+.order {
+	width: 1100px;
+	height: 180px;
+	margin: 20px 0 0 300px;
+	display: flex;
+	background-color: beige;
+}
+
+.sight h1{
+	line-height: 180px;
+	margin-left: 100px;
+	font-size: 30px;
+	display: inline-block;
+}
+
+.time p{
+	font-size: 20px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 120px;
+}
+
+.price h2{
+	margin-top: 140px;
+	margin-left: 450px;
+}

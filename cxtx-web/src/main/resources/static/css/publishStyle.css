@@ -1,0 +1,8 @@
+.strategy{
+	width: 1100px;
+	height: 1000px;
+	margin-top: 60px;
+	margin-left: 300px;
+	display: flex;
+	background-color: #eeeeee;
+}

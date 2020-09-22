@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+	var useri;
+	$(document).ready(function(){
+		$.post("/user/getUserInfo","",function(data){useri=data;
+		$("#email").val(useri.email);
+		$("#realName").val(useri.realName);
+		$("#nickName").val(useri.nickName);
+		$("#city").val(useri.cityName);
+		$("#phoneNumber").val(useri.phoneNumber);
+		$("#career").val(useri.career);
+		$("#description").val(useri.description);
+		$("#birth").val(useri.birth);
+		$("#phoneNumber").val(useri.phoneNumber);
+		},"json");
+	});
+</script>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/home_style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/selfInfStyle.css"/>
+		
+	</head>
+	<body>
+		
+		<div class="header">
+			<a href="打地鼠1.0.html"><img class="header-img" src="img/htihtihti.gif" ></a>
+			<h1>畅游天下</h1>			
+			<a href="logIn.html"><button class="header-button" type="button">登陆/注册</button></a>
+		</div>
+		
+		<div class="nav">
+			<div class="button">
+				<a href="home.html" class="button">首页</a>
+			</div>
+			<div class="button">
+				<a href="rout.html" class="button">旅游路线</a>
+			</div>
+			<div class="button">
+				<a href="strategy.html" class="button">旅游攻略</a>
+			</div>
+			<div class="button">
+				<a href="selfcenter.html" class="button_chosen">个人中心</a>
+			</div>
+		</div>
+		
+		<h1 style="margin-left: 300px; margin-top: 20px;">个人信息</h1>
+		
+
+		<div class="slefInf">
+						
+				<form>
+					
+					<div class="form-group">
+						<label>E-mail</label>
+						<input type="email" class="form-control" id="email" placeholder="Your E-mail">
+					</div>
+					
+					<div class="form-group">
+						<label>RealName</label>
+						<input type="text" class="form-control" id="realName" placeholder="RealName">
+					</div>
+					
+					<div class="form-group">
+						<label>NickName</label>
+						<input type="text" class="form-control" id="nickName" placeholder="NickName">
+					</div>
+					
+		
+					<div class="form-group">
+						<label>Gender</label>
+						<input style="width: 100px;" type="radio" checked ="checked" name="2" value="sex1">男						
+						<input style="width: 100px;margin-left: 100px;" type="radio"  name="2" value="sex2">女
+					</div>
+		
+					
+					<div class="form-group">
+						<label>City</label>
+						<input type="text" class="form-control" id="city" placeholder="City">
+					</div>
+					
+					<div class="form-group">
+						<label>PhoneNumber</label>
+						<input type="text" class="form-control" id="phoneNumber" placeholder="PhoneNumber">
+					</div>
+					
+					<div class="form-group">
+						<label>Career</label>
+						<input type="text" class="form-control" id="career" placeholder="Career">
+					</div>
+					
+					<div class="form-group">
+						<label>Description</label>
+						<input type="text" class="form-control" id="description" placeholder="Description">
+					</div>
+					
+					<div class="form-group">
+						<label>Birth</label>
+						<input type="text" class="form-control" id="birth" placeholder="Birth">
+					</div>
+
+					<br>
+					<button type="button" class="selfInf-btn">确认修改</button>
+
+					</form>
+
+		
+			</div>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

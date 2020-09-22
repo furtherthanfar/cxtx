@@ -1,0 +1,53 @@
+.sight{
+	width: 100%px-400px;
+	padding: 0;
+	height: 300px;
+	margin: 40px 200px 0 200px;
+	display: flex;
+	background-color: #EEEEEE;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.sight-img1,.sight-img2,.sight-img3{
+	min-width: 40%;
+	vertical-align: top;
+	padding: 0;
+	margin-left: 0;
+	height: 300px;
+	background-color: #CAF0D3;
+	display: inline-block;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.sight-img1{
+	background-image: url(../img/huanghelou.jpg);
+}
+
+.sight-img2{
+	background-image: url(../img/donghu.jpg);
+}
+
+.sight-img3{
+	background-image: url(../img/hust.jpg);
+}
+
+.sight p{
+	font-size: 30px;
+	margin: auto;
+}
+
+.btn{
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 20px;
+	height: 50px;
+	width: 100px;
+	padding: 14px;
+	background-color: #00dc37;
+	margin: 240px 0px 0px 550px;
+}
