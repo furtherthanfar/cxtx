@@ -54,11 +54,11 @@
 }
 
 .strategy {
-	width: 1000px;
+	width: 800px;
 	height: 180px;
-	margin: 60px 0 0 300px;
+	margin: 60px 0 0 100px;
 	display: flex;
-	background-color: #eeeeee;
+	background-color: black;
 }
 
 .strategy a{

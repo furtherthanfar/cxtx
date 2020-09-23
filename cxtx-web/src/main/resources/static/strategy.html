@@ -1,4 +1,44 @@
 <!DOCTYPE html>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+	var stri;
+	$(document).ready(function(){
+		$.get("/strategy/selectAll","",function(data){stri=data;
+			for(var i in stri){
+				$("#commontblocks").append("<div class=\"comment-wrap\">\
+					<div class=\"photo\">\
+						<div class=\"avatar\" style=\"background-image: url(img/head.jpg)\"></div>\
+					</div>\
+					<div class=\"comment-block\">\
+						<p class=\"comment-text\">"+stri[i].user.nickName+"说:"+stri[i].content+"</p>\
+						<div class=\"bottom-comment\">\
+							<div class=\"comment-date\">"+stri[i].time+"</div>\
+						</div>\
+					</div>\
+				</div>");
+			}
+		});
+	});
+	
+	//回车事件绑定
+	$(document).ready(function(){
+		$('#commontblocks').bind('keyup', function(event) {
+	　　		if (event.keyCode == "13") {
+	　　		　　$.post("/strategy/insert",
+					{
+						date:Date(),
+						content:$("#commentbox").val()
+					},
+				function(status){
+					if(status=="success"){
+					alert("发布成功");
+					location.reload();
+					}
+				});
+	　		}
+		});
+	});
+</script>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -6,6 +46,7 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/home_style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/strategy_style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/publishStyle.css"/>
 		
 	</head>
 	<body>
@@ -40,27 +81,27 @@
 			<button type="button">搜索</button>
 		</div>
 		
-		<div class="publish">
-			<a href="publish.html"><button class="btn" type="button">发布攻略</button></a>
-		</div>
+		<div class="strategy">
+			
+		<div class="comments" id="commontblocks">
+		
+		    <div class="comment-wrap">
+		        <div class="comment-block">
+		            <form action="">
+		                <textarea name="" id="commentbox" cols="30" rows="3" placeholder="输入想说的话,按回车发表..."></textarea>
+		            </form>
+		        </div>
+		    </div>
+			
 			
 		</div>
+			
 
-		<div class="strategy">			
-			<div class="bg-img"></div>
-			<a href="strategrInf.html">
-			<p>this is huanghelou</p>
-			</a>
+			
 		</div>
 		
-		<div class="strategy">
-			<div class="bg-img"></div>
-			<a href="strategrInf.html">
-			<p>this is huanghelou</p>
-			</a>
-		</div>
-			
-			
+		
+		
 		</div>
 		
 		
