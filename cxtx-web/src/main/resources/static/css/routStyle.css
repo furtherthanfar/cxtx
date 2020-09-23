@@ -1,17 +1,89 @@
 .rout{
-	width: 1000px;
-	height: 180px;
-	margin: 60px 0 0 300px;
-	display: flex;
-	background-color: #eeeeee;
+	width: 1135px;
+	height: 600px;
+	margin: 0 0 0 300px;
+	background-color: white;
 }
 
-.rout-img1,.rout-img2,.rout-img3{
-	min-width: 30%;
-	vertical-align: top;
-	padding: 0;
+.rout-word{
+	font-size: 20px;
+	width: 1135px;
+	height: 60px;
+	display: inline-block;
+	background-color: white;
+}
+
+.rout-word p{
+	line-height: 60px;
+}
+
+.rout-sight{
+	min-width: 360px;
+	margin-top: 20px;
 	margin-left: 0;
-	height: 100%;
+	margin-right: 15px;
+	height: 460px;
+	background-color: #EEEEEE;
+	display: inline-block;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.rout-img{
+	width: 1105px;
+	height: 400px;
+	margin-top: 20px;
+	line-height: 100px;
+	display: inline-block;
+	background-color: bisque;
+}
+
+.rout-inf{
+	width: 360px;
+	height: 200px;
+	margin-top: 15px;
+	background-color: #EEEEEE;
+
+}
+
+.sight-name{
+	width: 360px;
+	height: 40px;
+	background-color: #EEEEEE;
+}
+
+.sight-des{
+	width: 360px;
+	height: 100px;
+	margin-top: 10px;
+	background-color: #EEEEEE;
+}
+
+.sight-price{
+	width: 200px;
+	height: 40px;
+	margin-top: 10px;
+	background-color: #EEEEEE;
+	display: flex;
+	line-height: 40px;
+	margin-left: 160px;
+}
+
+.sight-price .btn{
+	width: 60px;
+	background-color:   #00B72E;
+	color: white;
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+.rout-img1,.rout-img2,.rout-img3,
+.rout-img4,.rout-img5,.rout-img6{
+	min-width: 360px;
+	height: 240px;
 	background-color: #CAF0D3;
 	display: inline-block;
 	overflow: hidden;
@@ -19,18 +91,27 @@
 }
 
 .rout-img1{
-	margin-left: 0;
 	background-image: url(../img/huanghelou.jpg);
 }
 
 .rout-img2{
-	margin-left: 30px;
 	background-image: url(../img/donghu.jpg);
 }
 
 .rout-img3{
-	margin-left: 30px;
 	background-image: url(../img/hust.jpg);
+}
+
+.rout-img4{
+	background-image: url(../img/tiananmen.jpg);
+}
+
+.rout-img5{
+	background-image: url(../img/changcheng.jpg);
+}
+
+.rout-img6{
+	background-image: url(../img/tiantan.jpg);
 }
 
 .rout p{

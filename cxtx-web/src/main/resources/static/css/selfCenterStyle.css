@@ -75,6 +75,27 @@
 	text-decoration: none;
 }
 
+.selfStrategy{
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 100px;
+}
+
+.selfStrategy p{
+	color: #000000;
+	font-size: 20px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.selfStrategy a{
+	text-decoration: none;
+}
+
+
 .order {
 	width: 1100px;
 	height: 180px;
