@@ -35,7 +35,18 @@ public interface StrategyDao {
      */
     public List<Strategy> selectStrategiesByUserId(int user_id);
 
-
+    /**
+     * 根据策略ID删除攻略
+     * @param strategy_id
+     */
     public void deleteStrategyById(int strategy_id);
+
+
+    /**
+     * 根据ID查找攻略
+     * @param strategy_id
+     * @return
+     */
+    public Strategy selectStrategyById(int strategy_id);
 
 }

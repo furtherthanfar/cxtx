@@ -17,7 +17,7 @@
         `order_creat_time`,
         `order_pay_time`,
         `order_note`,
-        `order_site_id`
+        `order_site_name`
         )
         values(
         #{orderId},
@@ -30,14 +30,14 @@
         #{orderCreatTime},
         #{orderPayTime},
         #{orderNote},
-        #{orderSiteId}
+        #{orderSiteName}
         )
     </insert>
 
     <select id="selectOrderByUsername" parameterType="java.lang.String" resultMap="orderMap" >
         select order_id,
         order_encoding,
-        order_site_id,
+        order_site_name,
         route_name,
         account_username,
         order_total_price,
@@ -54,7 +54,7 @@
     <resultMap id="orderMap" type="com.cxtx.order.Order">
         <id property="orderId" column="order_id"></id>
         <result property="orderEncoding" column="order_encoding"></result>
-        <result property="orderSiteId" column="order_site_id"></result>
+        <result property="orderSitename" column="order_site_Name"></result>
         <result property="routeName" column="route_name"></result>
         <result property="accountUsername" column="account_username"></result>
         <result property="orderTotalPrice" column="order_total_price"></result>

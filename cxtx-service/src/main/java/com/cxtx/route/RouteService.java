@@ -43,7 +43,11 @@ public class RouteService {
     }
 
     /**
-     *
+     *  根据路线ID删除路线
+     * @param route_id
      */
+    public void deleteByRouteId(int route_id){
+        routeMapper.deleteByRouteId(route_id);
+    }
 
 }

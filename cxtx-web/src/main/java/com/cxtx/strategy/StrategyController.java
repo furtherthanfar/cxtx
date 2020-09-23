@@ -99,6 +99,13 @@ public class StrategyController {
         return "upload\\imgs\\" + fileName;
     }
 
+    @ApiOperation(value = "根据攻略ID查询攻略")
+    @PostMapping(value = "/selectById")
+    public Strategy selectById(int strategy_id){
+        return strategyService.selectStrategyById(strategy_id);
+    }
+
+
     /**
      * 获得图片编码
      *
