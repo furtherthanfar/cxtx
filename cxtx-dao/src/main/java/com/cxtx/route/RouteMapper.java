@@ -39,4 +39,11 @@ public interface RouteMapper {
      * @return
      */
     public List<RouteSite> selectRouteSiteByRid(int route_id);
+
+
+    /**
+     *  根据路线ID删除路线
+     * @param route_id
+     */
+    public void deleteByRouteId(int route_id);
 }

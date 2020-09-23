@@ -33,6 +33,14 @@
         DELETE FROM strategy WHERE  strategy_id = #{strategy_id}
     </delete>
 
+    <select id="selectStrategyById" parameterType="java.lang.Integer" resultMap="strategyMap">
+        SELECT strategy_id, strategy_time, strategy_content, user_id
+        FROM
+        strategy
+        where
+        strategy_id = #{strategy_id}
+    </select>
+
     <resultMap id="strategyMap" type="com.cxtx.strategy.Strategy">
         <id property="id" column="strategy_id"></id>
         <result property="time" column="strategy_time"></result>

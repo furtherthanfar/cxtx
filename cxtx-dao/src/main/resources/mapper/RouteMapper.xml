@@ -42,6 +42,14 @@
         ASC
     </select>
 
+    <delete id="deleteByRouteId" parameterType="java.lang.Integer">
+        DELETE
+        FROM
+        route
+        WHERE
+        route_id = #{route_id}
+    </delete>
+
     <resultMap id="routeMap" type="com.cxtx.route.Route">
         <id property="id" column="route_id"></id>
         <result property="name" column="route_name"></result>

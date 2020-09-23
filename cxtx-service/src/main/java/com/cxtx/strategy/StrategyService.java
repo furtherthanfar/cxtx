@@ -51,4 +51,13 @@ public class StrategyService {
     public void deleteStrategyById(int strategy_id){
         strategyDao.deleteStrategyById(strategy_id);
     }
+
+    /**
+     * 根据ID查找攻略
+     * @param strategy_id
+     * @return
+     */
+    public Strategy selectStrategyById(int strategy_id){
+        return strategyDao.selectStrategyById(strategy_id);
+    }
 }
