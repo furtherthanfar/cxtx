@@ -1,4 +1,134 @@
 <!DOCTYPE html>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+	var username;
+	var siteList;
+	$.post("/user/getUserInfo","",function(data){useri=data;
+	username=useri.email;},"json");
+	
+	function orderticket(site){
+		$.post("/order/createorder",
+	        {
+	            orderSiteName:"'"+site.name+"'",
+				routeName:"",
+				accoutUserName:username,
+				orderTotalPrice:site.price,
+				orderReducePrice:1,
+				orderActualPrice:site.price,
+				orderNote:""
+	        },
+	        function(status){
+	            if(status=="success"){
+					$.get("/wallet/updateBalance?changedBalance=-"+site.price);
+					alert("订票成功");
+	            }
+			});
+	}
+	
+	
+	$(document).ready(function () {
+		$.ajax({
+			type:'GET',
+			url:'/site/getAllSites',
+			success:function(result){
+				if(result != null){
+					siteList = result;
+					for(var site in siteList){
+						$("#tour").append("<figure>" + "<img src=" + "\"" + siteList[site].pictures[0].path + "\"" + "alt=\"" + siteList[site].name + "\">"
+								+ "<figcaption>" + siteList[site].description + "<div class=\"info\">"
+								//.append("<em class=\"sat\">当前折扣 </em>")
+								+ "<em class=\"sat\" onclick=\"orderticket(siteList["+site+"])\">购买</em>"
+								+ "<span class=\"price\">￥<strong>" + siteList[site].price + "</strong>元</span>" + "</div>"
+								+ "<div class=\"type\">"+siteList[site].name+"</div>"
+								+ "</figcaption></figure>")
+					}
+				}
+			}
+		});
+	})
+</script>
+
+<style type="text/css">
+	#tour{
+		width: 1263px;
+		height: 1220px;
+		/*background-color: #ccc;*/
+		margin: 30px auto;
+		text-align: center;
+	}
+	#tour .center h2{
+		font-size: 45px;
+		letter-spacing: 2px;
+		color:#666;
+		margin: 10px 0;
+	}
+	#tour .center p{
+		color:#666;
+		margin: 10px 0;
+	}
+	/*旅游景点图文介绍*/
+	#tour figure{
+		display: inline-block;
+		border: 1px solid #ddd;
+		width: 380px;
+		padding: 4px;
+		border-radius: 4px;
+		margin:15px 12px;
+		text-align: left;
+		position: relative;
+	}
+	/*旅游描述图*/
+	#tour img{
+		width: 380px;
+		height: 253px;
+		vertical-align: middle;
+	}
+	/*旅游描述*/
+	#tour figcaption{
+		color: #777;
+		font-size: 14px;
+		padding: 7px 0 5px 0;
+		letter-spacing: 1px;
+		line-height: 1.5;
+	}
+	#tour .info{
+		padding: 5px 0 0 0;
+	}
+	/*满意度*/
+	#tour .sat{
+		float: right;
+		font-size: 13px;
+		color: #999;
+		font-style: normal;
+		position: relative;
+		top:5px;
+		right:5px;
+	}
+	/*价格*/
+	#tour .price{
+		color: #f60;
+		font-size: 14px;
+	}
+	#tour .price strong{
+		font-size: 20px;
+		letter-spacing: 1px;
+	}
+	/*旅游类型*/
+	#tour .type{
+		width: 90px;
+		height: 25px;
+		line-height: 25px;
+		font-size: 14px;
+		text-align: center;
+		color: #fff;
+		background-color: #59b200;
+		position: absolute;
+		top:4px;
+		left:4px;
+	}
+</style>
+
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -41,140 +171,13 @@
 			<button type="button">搜索</button>
 		</div>
 		
-		
-		<div class="rout">
-			<div class="rout-word">
-				<p>路线1：黄鹤楼 -> 东湖 -> 华科</p>
-			</div>
-			
-			<div class="rout-sight">
-				
-				<div class="rout-img1"></div>
-				
-				<div class="rout-inf">
-					<div class="sight-name">
-						<p>黄鹤楼</p>
-					</div>
-					<div class="sight-des">
-						<p>Description</p>
-					</div>
-					<div class="sight-price">
-						<label>价格</label>
-						<p>20</p>
-						<button type="button" class="btn">buy</button>
-					</div>			
-				</div>
-				
-			</div>
-			
-			<div class="rout-sight">
-				
-				<div class="rout-img2"></div>
-				
-				<div class="rout-inf">
-					<div class="sight-name">
-						<p>东湖</p>
-					</div>
-					<div class="sight-des">
-						<p>Description</p>
-					</div>
-					<div class="sight-price">
-						<label>价格</label>
-						<p>20</p>
-						<button type="button" class="btn">buy</button>
-					</div>			
-				</div>
-				
-			</div>
-			
-			<div class="rout-sight">
-				
-				<div class="rout-img3"></div>
-				<div class="rout-inf">
-					<div class="sight-name">
-						<p>华科</p>
-					</div>
-					<div class="sight-des">
-						<p>Description</p>
-					</div>
-					<div class="sight-price">
-						<label>价格</label>
-						<p>20</p>
-						<button type="button" class="btn">buy</button>
-					</div>			
-				</div>
-				
-			</div>
+		<div id="tour">
+			<section class="center">
+				<h2>热门景点</h2>
+				<p>各种最新热门景点路线推荐</p>
+			</section>
 			
 		</div>
 		
-		<div class="rout">
-			<div class="rout-word">
-				<p>路线2：天安门 -> 长城 -> 天坛</p>
-			</div>
-			
-			<div class="rout-sight">
-				
-				<div class="rout-img4"></div>
-				
-				<div class="rout-inf">
-					<div class="sight-name">
-						<p>天安门</p>
-					</div>
-					<div class="sight-des">
-						<p>Description</p>
-					</div>
-					<div class="sight-price">
-						<label>价格</label>
-						<p>20</p>
-						<button type="button" class="btn">buy</button>
-					</div>			
-				</div>
-				
-			</div>
-			
-			<div class="rout-sight">
-				
-				<div class="rout-img5"></div>
-				
-				<div class="rout-inf">
-					<div class="sight-name">
-						<p>长城</p>
-					</div>
-					<div class="sight-des">
-						<p>Description</p>
-					</div>
-					<div class="sight-price">
-						<label>价格</label>
-						<p>20</p>
-						<button type="button" class="btn">buy</button>
-					</div>			
-				</div>
-				
-			</div>
-			
-			<div class="rout-sight">
-				
-				<div class="rout-img6"></div>
-				<div class="rout-inf">
-					<div class="sight-name">
-						<p>天坛</p>
-					</div>
-					<div class="sight-des">
-						<p>Description</p>
-					</div>
-					<div class="sight-price">
-						<label>价格</label>
-						<p>20</p>
-						<button type="button" class="btn">buy</button>
-					</div>			
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		</div>
-		
-	</body>
+
 </html>
