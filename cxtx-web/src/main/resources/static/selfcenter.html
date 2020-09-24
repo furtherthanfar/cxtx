@@ -7,9 +7,28 @@
 		$("#wallet").text(useri.balance);
 		$("#score").text(useri.score);
 		},"json");
+		
+		$.get("/order/getorder","",function(data){
+			for(var order in data){
+				$("#orderinfo").append(
+					"<div class=\"order\">\
+						<div class=\"sight\">\
+							<h1>"+data[order].orderSiteName+"</h1>\
+						</div>\
+						<div class=\"time\">\
+							<p>订单时间："+data[order].orderCreatTime+"</p>\
+							<p>支付时间："+data[order].orderPayTime+"</p>\
+						</div>\
+						<div class=\"price\">\
+							<h2>价格："+data[order].orderActualPrice+"</h2>\
+						</div>\
+					</div>"
+				);
+			}
+		},json");
 	});
 </script>
-<html>
+<html id="orderinfo">
 	<head>
 		<meta charset="utf-8">
 		<title>旅游路线</title>
@@ -57,31 +76,5 @@
 		</div>
 		
 		<h1 style="margin-left: 300px; margin-top: 20px;">全部订单</h1>
-		
-		<div class="order">
-			<div class="sight">
-				<h1>景点名称</h1>
-			</div>
-			<div class="time">
-				<p>订单时间：2020.9.20</p>
-				<p>支付时间：2020.9.22</p>
-			</div>
-			<div class="price">
-				<h2>价格：20</h2>
-			</div>
-		</div>
-		
-		<div class="order">
-			<div class="sight">
-				<h1>景点名称</h1>
-			</div>
-			<div class="time">
-				<p>订单时间：2020.9.20</p>
-				<p>支付时间：2020.9.22</p>
-			</div>
-			<div class="price">
-				<h2>价格：20</h2>
-			</div>
-		</div>
 		
 </html>
